@@ -23,7 +23,7 @@ def invert_colors(image_path, output_path):
     inverted_image.save(output_path)
 
 # Ejemplo de uso
-invert_colors('smile.bmp', 'output3333.bmp')
+invert_colors('BMP_Testing\smile.bmp', 'BMP_Testing\output3333.bmp')
 
 # Example usage:
 #pixel_array = np.random.randint(0, 256, size=(100, 100), dtype=np.uint8)
