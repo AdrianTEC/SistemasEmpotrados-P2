@@ -1,9 +1,9 @@
 import os
 import sys
+import time
 
 # Verifica si se proporciona un mensaje como argumento al ejecutar el script
 if len(sys.argv) < 2:
-    print("Por favor, proporciona un mensaje como argumento al ejecutar el script.")
     sys.exit(1)
 
 # Obtén el mensaje del primer argumento pasado al script
@@ -11,16 +11,29 @@ mensaje = sys.argv[1]
 
 path_dispositivo = "/dev/pci_capture_chr_dev-0"
 
-# Escribe el mensaje en el dispositivo
-with open(path_dispositivo, 'w') as dispositivo:
-    dispositivo.write(mensaje)
-    print("El mensaje ha sido escrito")
+# Abre el archivo del dispositivo para escribir
+fd = os.open(path_dispositivo, os.O_WRONLY)
 
-dispositivo.close()
+# Escribe el mensaje en el dispositivo
+os.write(fd, mensaje.encode())
+
+# Cierra el archivo después de escribir
+os.close(fd)
+
+# Espera 1 segundo antes de continuar
+time.sleep(1)
+
+# Abre el archivo del dispositivo para leer
+fd = os.open(path_dispositivo, os.O_RDONLY)
+
+# Imprime un mensaje de que se está leyendo el contenido del dispositivo
+print("Leyendo contenido del dispositivo...")
 
 # Lee el contenido del dispositivo
-with open(path_dispositivo, 'r') as dispositivo:
-    contenido = dispositivo.read()
-    print("El contenido del dispositivo es: ", contenido)
+contenido = os.read(fd, 1024).decode()
 
-dispositivo.close()
+# Cierra el archivo después de leer
+os.close(fd)
+
+print("Contenido leído del dispositivo:")
+print(contenido)
