@@ -1,0 +1,4 @@
+
+start-agent-manager
+agent_manager.connect-to-agent
+matic0.upload from = /home/adriii/qsp-driver-support.craff to = /home/simics
