@@ -1,6 +1,7 @@
 /*
   Device PCI data capture
-  This simulated PCI device receives a file path in the attribute and reads the contents of the specified .bmp file into the buffer.
+  This simulated PCI device recieves a file path in the attribute and displays the
+  first 8 bytes of the attribute file as a parameter.
 
   This Software is part of Simics. The rights to copy, distribute,
   modify, or otherwise make use of this Software may be licensed only
@@ -15,13 +16,12 @@ dml 1.4;
 device pci_data_capture;
 import "utility.dml";
 param desc = "PCI data capture";
-param documentation = "This simulated PCI device receives a file path in the attribute and reads the contents of the specified .bmp file into the buffer.";
+param documentation = "This simulated PCI device recieves a file path in the attribute and displays the first 8 bytes of the attribute file";
 
 //this header statement imports header libraries from C directly
 header %{
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h> // for uint8_t
 %}
 
 //extern statements for the usage of this library function calls of the imports defined above
@@ -48,7 +48,7 @@ session FILE * file;
 
 /*
     simulates input data received by the device
-    receives a path to the file that will be populate in this device registers
+    recieves a path to the file that will be populate in this device registers
 */
 
 attribute input {
@@ -69,7 +69,7 @@ attribute input {
     }
 
     /* 
-        set_string: copies the parameter char * to the internal char structure
+        set_string: copies the parmater char * to the internal char structure
         the old stored value is deleted 
     */
     method set_string(const char *ptr) {
@@ -113,7 +113,8 @@ bank regs is function_mapped_bank {
         param init_val = BUFFER_SIZE;
     }
     
-    //when command register is written with a 1 then the device reads the .bmp file and populates the buffer
+    //when command register is written with a 1 then the device outputs current data 
+    //stored in the input attribute
     register cmd size 4 @ 0x14 {
         is write;
         param init_val = 0x0;
@@ -123,19 +124,13 @@ bank regs is function_mapped_bank {
             local uint32 index = 0;
             if (value == 0x1) {
                 if(input.val != NULL) {
-                    file = fopen(input.val, "rb"); // Open the file in binary mode
-                    if (file != NULL) {
-                        // Read the first 8 bytes of the .bmp file
-                        uint8_t buffer[BUFFER_SIZE];
-                        size_t bytes_read = fread(buffer, sizeof(uint8_t), BUFFER_SIZE, file);
-                        for (index = 0; index < bytes_read; index++) {
-                            regs.buffer[index].set_val(buffer[index]);
-                            log info, 4: "loaded val = 0x%x @ buffer[%d]", buffer[index], index;
-                        }
-                        fclose(file);
-                    } else {
-                        log error, 4: "Failed to open file %s", input.val;
+                    file = fopen(input.val, "r");
+                    for (index = 0; index < BUFFER_SIZE; index++) {
+                        local uint8 char_read = fgetc(file);
+                        buffer[index].set_val(char_read);
+                        log info, 4: "loaded val = 0x%x @ buffer[%d]", char_read, index;
                     }
+                    fclose(file);
 		        }
             }
 
@@ -148,4 +143,3 @@ bank regs is function_mapped_bank {
         param init_val = 0x0;
     }
 }
-
