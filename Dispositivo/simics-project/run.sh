@@ -1,1 +1,4 @@
-./simics targets/qsp-x86/custom-target.simics
+make
+./simics targets/qsp-x86/load-simics-with-config.simics
+
+

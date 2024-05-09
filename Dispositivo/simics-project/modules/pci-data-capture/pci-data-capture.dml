@@ -113,29 +113,46 @@ bank regs is function_mapped_bank {
         param init_val = BUFFER_SIZE;
     }
     
-    //when command register is written with a 1 then the device outputs current data 
-    //stored in the input attribute
-    register cmd size 4 @ 0x14 {
-        is write;
-        param init_val = 0x0;
-        
-        //called on write by the processor
-        method write(uint64 value) {
-            local uint32 index = 0;
-            if (value == 0x1) {
-                if(input.val != NULL) {
-                    file = fopen(input.val, "r");
-                    for (index = 0; index < BUFFER_SIZE; index++) {
-                        local uint8 char_read = fgetc(file);
-                        buffer[index].set_val(char_read);
-                        log info, 4: "loaded val = 0x%x @ buffer[%d]", char_read, index;
+    
+register cmd size 4 @ 0x14 {
+    is write;
+    param init_val = 0x0;
+    
+    // called on write by the processor
+    method write(uint64 value) {
+        if (value == 0x1) {
+            if (input.val != NULL) {
+                file = fopen(input.val, "rb");
+                if (file != NULL) {
+                    // Saltar la cabecera del archivo BMP (tamaño fijo de 54 bytes)
+                    local uint32 i = 0;
+                    for (i = 0; i < 54; i++) {
+                        fgetc(file);
                     }
-                    fclose(file);
-		        }
-            }
 
+                    local uint32 index = 0;  // Variable para rastrear la posición en el buffer
+                    local uint16 pixel_value;
+                    while (index < BUFFER_SIZE) {
+                        // Leer valor del píxel de 16 bits
+                        pixel_value = fgetc(file);
+                        if (pixel_value == -1) break; // Verificar el final del archivo
+                        pixel_value |= fgetc(file) << 8; // Leer el siguiente byte y combinarlo con el anterior
+                        // Escribir el valor del píxel en el buffer
+                        buffer[index++].set_val(pixel_value);
+                    }
+
+                    fclose(file);
+                } else {
+                    log error, 4: "Error al abrir el archivo.";
+                }
+            }
         }
     }
+}
+
+
+    
+
     
     //for communicating initial 8 bytes of the file after command=1 and input attr value is populated
     register buffer[i < BUFFER_SIZE] size 1 @ 0x18 + i {

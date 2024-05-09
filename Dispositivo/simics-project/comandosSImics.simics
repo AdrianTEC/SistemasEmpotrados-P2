@@ -1,0 +1,6 @@
+pci_capture.dev ->input= "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/BMP_Testing/smile.bmp"
+
+
+board.mb.nb.pci_bus.mem_space.write 0xf1000000 + 0x14 0x1 0x4
+
+pci_capture.dev.bank.regs ->buffer

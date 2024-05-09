@@ -270,7 +270,7 @@
     #include <simics/util/bitcount.h>
     #define convert_le64 CONVERT_LE64
 #undef DMLDIR_COMMON_H
-#define DMLDIR_PCI_DATA_CAPTURE_H "/home/adriii/Desktop/ProyectoEmpotrados/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.h"
+#define DMLDIR_PCI_DATA_CAPTURE_H "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.h"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -475,8 +475,8 @@
 #line 476 "pci-data-capture-dml.h"
 #undef DMLDIR_COMMON_H
 
-#define DMLDIR_PCI_DATA_CAPTURE_H "/home/adriii/Downloads/academia-collaboration-master/simics-project/modules/pci-data-capture/pci-data-capture.h"
-#line 22 "/home/adriii/Downloads/academia-collaboration-master/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+#define DMLDIR_PCI_DATA_CAPTURE_H "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.h"
+#line 22 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
 
 #include <stdio.h>
 #include <stdlib.h>

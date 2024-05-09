@@ -22,13 +22,13 @@ EXPORTED const char _module_capabilities_[] =
 	"API:" BUILD_API ";"
 	"BLD:" "0" ";"
 	"BLD_NS:__simics_project__;"
-	"BUILDDATE:" "1715138192" ";"
+	"BUILDDATE:" "1715274917" ";"
 	"MOD:" "pci-data-capture" ";"
 	"CLS:pci_data_capture" ";"
 	"HOSTTYPE:" "linux64" ";"
 	"THREADSAFE;"
 	EXTRA ";";
-EXPORTED const char _module_date[] = "Tue May  7 23:16:32 2024";
+EXPORTED const char _module_date[] = "Thu May  9 13:15:17 2024";
 extern void _initialize_pci_data_capture_dml(void);
 extern void init_local(void) {}
 EXPORTED void _simics_module_init(void);

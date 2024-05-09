@@ -22,13 +22,13 @@ EXPORTED const char _module_capabilities_[] =
 	"API:" BUILD_API ";"
 	"BLD:" "0" ";"
 	"BLD_NS:__simics_project__;"
-	"BUILDDATE:" "1715138199" ";"
+	"BUILDDATE:" "1715275666" ";"
 	"MOD:" "tomasulo" ";"
 	"CLS:tomasulo;CLS:tomasulo_connection_t" ";"
 	"HOSTTYPE:" "linux64" ";"
 	"THREADSAFE;"
 	EXTRA ";";
-EXPORTED const char _module_date[] = "Tue May  7 23:16:39 2024";
+EXPORTED const char _module_date[] = "Thu May  9 13:27:46 2024";
 EXPORTED void _simics_module_init(void);
 extern void sim_iface_wrap_init(void);
 

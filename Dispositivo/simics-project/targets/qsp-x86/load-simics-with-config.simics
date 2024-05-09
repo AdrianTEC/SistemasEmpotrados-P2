@@ -1,4 +1,4 @@
-$disk0_image = "/home/adriii/Desktop/ProyectoEmpotrados/Dispositivo/simics-project/qsp-driver-support.craff"
+$disk0_image = "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/qsp-driver-support.craff"
 
 # Find the script file in the project using %simics%/
 run-command-file "%simics%/targets/qsp-x86/custom-target.simics"

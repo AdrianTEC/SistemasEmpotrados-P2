@@ -1,4 +1,4 @@
-project: /home/adriii/Desktop/ProyectoEmpotrados/Dispositivo/simics-project
+project: /home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project
 simics-root: /home/adriii/simics/simics-6.0.185
 simics-model-builder: /home/adriii/simics/simics-6.0.185
 mingw: None
