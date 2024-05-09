@@ -1,0 +1,4 @@
+start-agent-manager
+agent_manager.connect-to-agent
+matic0.upload from = /home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/driver/pci_capture_driver.c to = /home/simics/driver
+matic0.upload from = /home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/driver/Makefile to = /home/simics/driver

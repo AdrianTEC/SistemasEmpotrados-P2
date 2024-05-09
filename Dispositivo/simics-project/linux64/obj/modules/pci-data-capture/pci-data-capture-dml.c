@@ -5600,68 +5600,74 @@ static exception_type_t _DML_M_regs__transaction_access(pci_data_capture_t *_dev
 
 /* regs.cmd.write */
 static void  _DML_M_regs__cmd__write(pci_data_capture_t *_dev, uint64 value)
-#line 122 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+#line 124 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
 {
     if (value == 1LL)
     {
-        #line 124 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+        #line 126 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
         if (!(_dev->input.val == NULL))
-        #line 124 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+        #line 126 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
         {
             {
-                #line 125 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                #line 127 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
                 _dev->file = fopen(_dev->input.val, "rb");
-                #line 125 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                #line 127 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
             }
             if (!(_dev->file == NULL))
-            #line 126 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+            #line 128 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
             {
-                #line 128 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
-                uint32 v804_i UNUSED  = (uint32 )0ULL;
+                #line 130 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                int v804_i UNUSED  = (int32 )0LL;
                 {
-                    #line 129 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
-                    v804_i = (uint32 )0ULL;
-                    #line 129 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    #line 131 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    v804_i = (int32 )0LL;
+                    #line 131 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
                 }
-                #line 129 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                #line 131 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
                 for (; (int64 )v804_i < 54LL; (int64 )(v804_i)++)
                 fgetc(_dev->file);
-                #line 133 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                #line 135 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
                 uint32 v804_index UNUSED  = (uint32 )0ULL;
                 uint16 v804_pixel_value UNUSED  = 0LL;
                 while ((int64 )v804_index < 0x100LL)
-                #line 135 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                #line 137 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
                 {
-                    #line 137 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
-                    {
-                        #line 137 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
-                        v804_pixel_value = (uint16 )fgetc(_dev->file);
-                        #line 137 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
-                    }
-                    if ((int64 )v804_pixel_value == -1LL)
-                    #line 138 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
-                    break;
-                    uint16 *v810_tmp UNUSED  = &v804_pixel_value;
                     #line 139 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
-                    *v810_tmp = (uint16 )(((int64 )*v810_tmp) | (DML_shl((int64 )fgetc(_dev->file), 8LL, "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml", 139)));
+                    uint8 v808_byte1 UNUSED  = fgetc(_dev->file);
                     #line 141 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    if ((int64 )v808_byte1 == 255LL)
+                    #line 141 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    break;
+                    #line 143 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    uint8 v808_byte2 UNUSED  = fgetc(_dev->file);
+                    #line 145 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    if ((int64 )v808_byte2 == 255LL)
+                    #line 145 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    break;
+                    #line 147 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    {
+                        #line 147 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                        v804_pixel_value = (uint16 )(((int64 )v808_byte1) | (DML_shl((int64 )v808_byte2, 8LL, "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml", 147)));
+                        #line 147 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                    }
+                    #line 149 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
                     _DML_TM_register__set_val(_dev, UPCAST(UPCAST(({uint32 __indices[] = {(int64 )(v804_index)++}; ((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only) {(&_tr_regs_buffer____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only), ((_identity_t) {.id = 89, .encoded_index = __indices[0]})});}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only, _reg_write_as_field._register), _register, set._set.set_val), (uint64 )v804_pixel_value);
                 }
-                #line 144 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+                #line 152 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
                 fclose(_dev->file);
             }
-            #line 145 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+            #line 153 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
             else
             SIM_LOG_ERROR(_dev->regs._obj, 0LL, "Error al abrir el archivo.");
-            #line 148 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+            #line 156 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
         }
-        #line 124 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+        #line 126 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
     }
-    #line 150 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+    #line 158 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
     return;
-    #line 150 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
+    #line 158 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
 }
-#line 5665 "pci-data-capture-dml.c"
+#line 5671 "pci-data-capture-dml.c"
 
 /* pci_config.transaction_access */
 static exception_type_t _DML_M_pci_config__transaction_access(pci_data_capture_t *_dev, transaction_t *t, uint64 offset, void  *aux)
@@ -5671,7 +5677,7 @@ static exception_type_t _DML_M_pci_config__transaction_access(pci_data_capture_t
     #line 2619 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return (int32 )0x407LL;
 }
-#line 5675 "pci-data-capture-dml.c"
+#line 5681 "pci-data-capture-dml.c"
 
 /* pci_config.vendor_id.write */
 static void  _DML_M_pci_config__vendor_id__write(pci_data_capture_t *_dev, uint64 value)
@@ -5694,7 +5700,7 @@ static void  _DML_M_pci_config__vendor_id__write(pci_data_capture_t *_dev, uint6
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5698 "pci-data-capture-dml.c"
+#line 5704 "pci-data-capture-dml.c"
 
 /* pci_config.vendor_id.do_write */
 static void  _DML_M_pci_config__vendor_id__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -5704,7 +5710,7 @@ static void  _DML_M_pci_config__vendor_id__do_write(pci_data_capture_t *_dev, ui
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5708 "pci-data-capture-dml.c"
+#line 5714 "pci-data-capture-dml.c"
 
 /* pci_config.vendor_id.can_write */
 static bool _DML_M_pci_config__vendor_id__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -5712,7 +5718,7 @@ static bool _DML_M_pci_config__vendor_id__can_write(pci_data_capture_t *_dev, ui
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_vendor_id____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 84, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 5716 "pci-data-capture-dml.c"
+#line 5722 "pci-data-capture-dml.c"
 
 /* pci_config.subsystem_vendor_id.write */
 static void  _DML_M_pci_config__subsystem_vendor_id__write(pci_data_capture_t *_dev, uint64 value)
@@ -5735,7 +5741,7 @@ static void  _DML_M_pci_config__subsystem_vendor_id__write(pci_data_capture_t *_
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5739 "pci-data-capture-dml.c"
+#line 5745 "pci-data-capture-dml.c"
 
 /* pci_config.subsystem_vendor_id.do_write */
 static void  _DML_M_pci_config__subsystem_vendor_id__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -5745,7 +5751,7 @@ static void  _DML_M_pci_config__subsystem_vendor_id__do_write(pci_data_capture_t
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5749 "pci-data-capture-dml.c"
+#line 5755 "pci-data-capture-dml.c"
 
 /* pci_config.subsystem_vendor_id.can_write */
 static bool _DML_M_pci_config__subsystem_vendor_id__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -5753,7 +5759,7 @@ static bool _DML_M_pci_config__subsystem_vendor_id__can_write(pci_data_capture_t
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_subsystem_vendor_id____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 83, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 5757 "pci-data-capture-dml.c"
+#line 5763 "pci-data-capture-dml.c"
 
 /* pci_config.subsystem_id.write */
 static void  _DML_M_pci_config__subsystem_id__write(pci_data_capture_t *_dev, uint64 value)
@@ -5776,7 +5782,7 @@ static void  _DML_M_pci_config__subsystem_id__write(pci_data_capture_t *_dev, ui
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5780 "pci-data-capture-dml.c"
+#line 5786 "pci-data-capture-dml.c"
 
 /* pci_config.subsystem_id.do_write */
 static void  _DML_M_pci_config__subsystem_id__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -5786,7 +5792,7 @@ static void  _DML_M_pci_config__subsystem_id__do_write(pci_data_capture_t *_dev,
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5790 "pci-data-capture-dml.c"
+#line 5796 "pci-data-capture-dml.c"
 
 /* pci_config.subsystem_id.can_write */
 static bool _DML_M_pci_config__subsystem_id__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -5794,7 +5800,7 @@ static bool _DML_M_pci_config__subsystem_id__can_write(pci_data_capture_t *_dev,
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_subsystem_id____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 82, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 5798 "pci-data-capture-dml.c"
+#line 5804 "pci-data-capture-dml.c"
 
 /* pci_config.status.mhz.write_field */
 static void  _DML_M_pci_config__status__mhz__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -5803,7 +5809,7 @@ static void  _DML_M_pci_config__status__mhz__write_field(pci_data_capture_t *_de
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 5807 "pci-data-capture-dml.c"
+#line 5813 "pci-data-capture-dml.c"
 
 /* pci_config.status.ir.write_field */
 static void  _DML_M_pci_config__status__ir__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -5812,7 +5818,7 @@ static void  _DML_M_pci_config__status__ir__write_field(pci_data_capture_t *_dev
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 5816 "pci-data-capture-dml.c"
+#line 5822 "pci-data-capture-dml.c"
 
 /* pci_config.status.ins.write_field */
 static void  _DML_M_pci_config__status__ins__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -5821,7 +5827,7 @@ static void  _DML_M_pci_config__status__ins__write_field(pci_data_capture_t *_de
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 5825 "pci-data-capture-dml.c"
+#line 5831 "pci-data-capture-dml.c"
 
 /* pci_config.status.fbb.write_field */
 static void  _DML_M_pci_config__status__fbb__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -5830,7 +5836,7 @@ static void  _DML_M_pci_config__status__fbb__write_field(pci_data_capture_t *_de
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 5834 "pci-data-capture-dml.c"
+#line 5840 "pci-data-capture-dml.c"
 
 /* pci_config.status.ds.write_field */
 static void  _DML_M_pci_config__status__ds__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -5839,7 +5845,7 @@ static void  _DML_M_pci_config__status__ds__write_field(pci_data_capture_t *_dev
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 5843 "pci-data-capture-dml.c"
+#line 5849 "pci-data-capture-dml.c"
 
 /* pci_config.status.c.write_field */
 static void  _DML_M_pci_config__status__c__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -5848,7 +5854,7 @@ static void  _DML_M_pci_config__status__c__write_field(pci_data_capture_t *_dev,
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 5852 "pci-data-capture-dml.c"
+#line 5858 "pci-data-capture-dml.c"
 
 /* pci_config.revision_id.write */
 static void  _DML_M_pci_config__revision_id__write(pci_data_capture_t *_dev, uint64 value)
@@ -5871,7 +5877,7 @@ static void  _DML_M_pci_config__revision_id__write(pci_data_capture_t *_dev, uin
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5875 "pci-data-capture-dml.c"
+#line 5881 "pci-data-capture-dml.c"
 
 /* pci_config.revision_id.do_write */
 static void  _DML_M_pci_config__revision_id__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -5881,7 +5887,7 @@ static void  _DML_M_pci_config__revision_id__do_write(pci_data_capture_t *_dev, 
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5885 "pci-data-capture-dml.c"
+#line 5891 "pci-data-capture-dml.c"
 
 /* pci_config.revision_id.can_write */
 static bool _DML_M_pci_config__revision_id__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -5889,7 +5895,7 @@ static bool _DML_M_pci_config__revision_id__can_write(pci_data_capture_t *_dev, 
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_revision_id____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 68, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 5893 "pci-data-capture-dml.c"
+#line 5899 "pci-data-capture-dml.c"
 
 /* pci_config.min_gnt.write */
 static void  _DML_M_pci_config__min_gnt__write(pci_data_capture_t *_dev, uint64 value)
@@ -5912,7 +5918,7 @@ static void  _DML_M_pci_config__min_gnt__write(pci_data_capture_t *_dev, uint64 
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5916 "pci-data-capture-dml.c"
+#line 5922 "pci-data-capture-dml.c"
 
 /* pci_config.min_gnt.do_write */
 static void  _DML_M_pci_config__min_gnt__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -5922,7 +5928,7 @@ static void  _DML_M_pci_config__min_gnt__do_write(pci_data_capture_t *_dev, uint
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5926 "pci-data-capture-dml.c"
+#line 5932 "pci-data-capture-dml.c"
 
 /* pci_config.min_gnt.can_write */
 static bool _DML_M_pci_config__min_gnt__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -5930,7 +5936,7 @@ static bool _DML_M_pci_config__min_gnt__can_write(pci_data_capture_t *_dev, uint
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_min_gnt____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 65, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 5934 "pci-data-capture-dml.c"
+#line 5940 "pci-data-capture-dml.c"
 
 /* pci_config.max_lat.write */
 static void  _DML_M_pci_config__max_lat__write(pci_data_capture_t *_dev, uint64 value)
@@ -5953,7 +5959,7 @@ static void  _DML_M_pci_config__max_lat__write(pci_data_capture_t *_dev, uint64 
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5957 "pci-data-capture-dml.c"
+#line 5963 "pci-data-capture-dml.c"
 
 /* pci_config.max_lat.do_write */
 static void  _DML_M_pci_config__max_lat__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -5963,7 +5969,7 @@ static void  _DML_M_pci_config__max_lat__do_write(pci_data_capture_t *_dev, uint
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5967 "pci-data-capture-dml.c"
+#line 5973 "pci-data-capture-dml.c"
 
 /* pci_config.max_lat.can_write */
 static bool _DML_M_pci_config__max_lat__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -5971,7 +5977,7 @@ static bool _DML_M_pci_config__max_lat__can_write(pci_data_capture_t *_dev, uint
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_max_lat____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 64, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 5975 "pci-data-capture-dml.c"
+#line 5981 "pci-data-capture-dml.c"
 
 /* pci_config.interrupts.soft_reset */
 static void  _DML_M_pci_config__interrupts__soft_reset(pci_data_capture_t *_dev)
@@ -5982,7 +5988,7 @@ static void  _DML_M_pci_config__interrupts__soft_reset(pci_data_capture_t *_dev)
     return;
     #line 442 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5986 "pci-data-capture-dml.c"
+#line 5992 "pci-data-capture-dml.c"
 
 /* pci_config.interrupts.hard_reset */
 static void  _DML_M_pci_config__interrupts__hard_reset(pci_data_capture_t *_dev)
@@ -5993,7 +5999,7 @@ static void  _DML_M_pci_config__interrupts__hard_reset(pci_data_capture_t *_dev)
     return;
     #line 438 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 5997 "pci-data-capture-dml.c"
+#line 6003 "pci-data-capture-dml.c"
 
 /* pci_config.interrupt_pin.write */
 static void  _DML_M_pci_config__interrupt_pin__write(pci_data_capture_t *_dev, uint64 value)
@@ -6016,7 +6022,7 @@ static void  _DML_M_pci_config__interrupt_pin__write(pci_data_capture_t *_dev, u
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6020 "pci-data-capture-dml.c"
+#line 6026 "pci-data-capture-dml.c"
 
 /* pci_config.interrupt_pin.do_write */
 static void  _DML_M_pci_config__interrupt_pin__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -6026,7 +6032,7 @@ static void  _DML_M_pci_config__interrupt_pin__do_write(pci_data_capture_t *_dev
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6030 "pci-data-capture-dml.c"
+#line 6036 "pci-data-capture-dml.c"
 
 /* pci_config.interrupt_pin.can_write */
 static bool _DML_M_pci_config__interrupt_pin__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -6034,7 +6040,7 @@ static bool _DML_M_pci_config__interrupt_pin__can_write(pci_data_capture_t *_dev
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_interrupt_pin____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 60, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 6038 "pci-data-capture-dml.c"
+#line 6044 "pci-data-capture-dml.c"
 
 /* pci_config.header_type.type.write_field */
 static void  _DML_M_pci_config__header_type__type__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6043,7 +6049,7 @@ static void  _DML_M_pci_config__header_type__type__write_field(pci_data_capture_
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6047 "pci-data-capture-dml.c"
+#line 6053 "pci-data-capture-dml.c"
 
 /* pci_config.header_type.mf.write_field */
 static void  _DML_M_pci_config__header_type__mf__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6052,7 +6058,7 @@ static void  _DML_M_pci_config__header_type__mf__write_field(pci_data_capture_t 
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6056 "pci-data-capture-dml.c"
+#line 6062 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.update_mapping */
 static void  _DML_M_pci_config__expansion_rom_base__update_mapping(pci_data_capture_t *_dev)
@@ -6065,7 +6071,7 @@ static void  _DML_M_pci_config__expansion_rom_base__update_mapping(pci_data_capt
     return;
     #line 599 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6069 "pci-data-capture-dml.c"
+#line 6075 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.pci_mapping_object */
 static conf_object_t *_DML_M_pci_config__expansion_rom_base__pci_mapping_object(pci_data_capture_t *_dev)
@@ -6073,7 +6079,7 @@ static conf_object_t *_DML_M_pci_config__expansion_rom_base__pci_mapping_object(
 {
     return _dev->expansion_rom.obj;
 }
-#line 6077 "pci-data-capture-dml.c"
+#line 6083 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.pci_mapping_enabled */
 static bool _DML_M_pci_config__expansion_rom_base__pci_mapping_enabled(pci_data_capture_t *_dev)
@@ -6082,21 +6088,21 @@ static bool _DML_M_pci_config__expansion_rom_base__pci_mapping_enabled(pci_data_
     return (!((CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write) {(&_tr_pci_config_expansion_rom_base_e____implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write), ((_identity_t) {.id = 53, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write, field._get))) == 0LL) && !(_dev->expansion_rom.obj == NULL)) && !(_dev->expansion_rom_size.val == 0LL);
     #line 659 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6086 "pci-data-capture-dml.c"
+#line 6092 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.pci_bar_size_bits */
 static int _DML_M_pci_config__expansion_rom_base__pci_bar_size_bits(pci_data_capture_t *_dev)
 #line 649 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 {
-    int v862_bits UNUSED  = 0LL;
+    int v861_bits UNUSED  = 0LL;
     {
         #line 651 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v862_bits = log2_64(_dev->expansion_rom_size.val);
+        v861_bits = log2_64(_dev->expansion_rom_size.val);
         #line 651 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
-    return v862_bits;
+    return v861_bits;
 }
-#line 6100 "pci-data-capture-dml.c"
+#line 6106 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.e.write */
 static void  _DML_M_pci_config__expansion_rom_base__e__write(pci_data_capture_t *_dev, uint64 value)
@@ -6117,29 +6123,29 @@ static void  _DML_M_pci_config__expansion_rom_base__e__write(pci_data_capture_t 
     return;
     #line 646 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6121 "pci-data-capture-dml.c"
+#line 6127 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.e.read */
 static uint64 _DML_M_pci_config__expansion_rom_base__e__read(pci_data_capture_t *_dev)
 #line 629 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 {
-    uint64 v867_value UNUSED  = 0LL;
+    uint64 v866_value UNUSED  = 0LL;
     if (!(_dev->expansion_rom.obj == NULL) && !(_dev->expansion_rom_size.val == 0LL))
     {
         #line 632 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v867_value = CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write) {(&_tr_pci_config_expansion_rom_base_e____implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write), ((_identity_t) {.id = 53, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write, field._get));
+        v866_value = CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write) {(&_tr_pci_config_expansion_rom_base_e____implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write), ((_identity_t) {.id = 53, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___read_field___write_field__field__read__write, field._get));
         #line 632 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
     else
     {
         #line 634 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v867_value = 0ULL;
+        v866_value = 0ULL;
         #line 634 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
     #line 636 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-    return v867_value;
+    return v866_value;
 }
-#line 6143 "pci-data-capture-dml.c"
+#line 6149 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.base.write */
 static void  _DML_M_pci_config__expansion_rom_base__base__write(pci_data_capture_t *_dev, uint64 value)
@@ -6160,29 +6166,29 @@ static void  _DML_M_pci_config__expansion_rom_base__base__write(pci_data_capture
     return;
     #line 623 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6164 "pci-data-capture-dml.c"
+#line 6170 "pci-data-capture-dml.c"
 
 /* pci_config.expansion_rom_base.base.read */
 static uint64 _DML_M_pci_config__expansion_rom_base__base__read(pci_data_capture_t *_dev)
 #line 606 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 {
-    uint64 v875_value UNUSED  = 0LL;
+    uint64 v874_value UNUSED  = 0LL;
     if (!(_dev->expansion_rom.obj == NULL) && !(_dev->expansion_rom_size.val == 0LL))
     {
         #line 609 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v875_value = CALL_TRAIT_METHOD0(base_address, get_base, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset__base_address) {(&_tr_pci_config_expansion_rom_base____implicit__init_val_hard_reset___init_val_soft_reset__base_address), ((_identity_t) {.id = 54, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset__base_address, base_address));
+        v874_value = CALL_TRAIT_METHOD0(base_address, get_base, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset__base_address) {(&_tr_pci_config_expansion_rom_base____implicit__init_val_hard_reset___init_val_soft_reset__base_address), ((_identity_t) {.id = 54, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset__base_address, base_address));
         #line 609 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
     else
     {
         #line 611 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v875_value = 0ULL;
+        v874_value = 0ULL;
         #line 611 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
     #line 613 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-    return v875_value;
+    return v874_value;
 }
-#line 6186 "pci-data-capture-dml.c"
+#line 6192 "pci-data-capture-dml.c"
 
 /* pci_config.device_id.write */
 static void  _DML_M_pci_config__device_id__write(pci_data_capture_t *_dev, uint64 value)
@@ -6205,7 +6211,7 @@ static void  _DML_M_pci_config__device_id__write(pci_data_capture_t *_dev, uint6
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6209 "pci-data-capture-dml.c"
+#line 6215 "pci-data-capture-dml.c"
 
 /* pci_config.device_id.do_write */
 static void  _DML_M_pci_config__device_id__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -6215,7 +6221,7 @@ static void  _DML_M_pci_config__device_id__do_write(pci_data_capture_t *_dev, ui
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6219 "pci-data-capture-dml.c"
+#line 6225 "pci-data-capture-dml.c"
 
 /* pci_config.device_id.can_write */
 static bool _DML_M_pci_config__device_id__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -6223,7 +6229,7 @@ static bool _DML_M_pci_config__device_id__can_write(pci_data_capture_t *_dev, ui
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_device_id____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 51, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 6227 "pci-data-capture-dml.c"
+#line 6233 "pci-data-capture-dml.c"
 
 /* pci_config.command.mem.write */
 static void  _DML_M_pci_config__command__mem__write(pci_data_capture_t *_dev, uint64 enable)
@@ -6254,18 +6260,18 @@ static void  _DML_M_pci_config__command__mem__write(pci_data_capture_t *_dev, ui
                     #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                     {
                         #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                        base_address v889_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
-                        if (VTABLE_PARAM(UPCAST(v889_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v889_reg, base_address, map_params), struct _map_params, map_type), "memory") == 0LL)
+                        base_address v888_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
+                        if (VTABLE_PARAM(UPCAST(v888_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v888_reg, base_address, map_params), struct _map_params, map_type), "memory") == 0LL)
                         #line 487 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                         {
                             #line 489 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v889_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
-                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v889_reg);
+                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v888_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
+                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v888_reg);
                             #line 492 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v889_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
-                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v889_reg);
+                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v888_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
+                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v888_reg);
                         }
-                        #line 6269 "pci-data-capture-dml.c"
+                        #line 6275 "pci-data-capture-dml.c"
                     }
                     #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                 }
@@ -6279,7 +6285,7 @@ static void  _DML_M_pci_config__command__mem__write(pci_data_capture_t *_dev, ui
     return;
     #line 546 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6283 "pci-data-capture-dml.c"
+#line 6289 "pci-data-capture-dml.c"
 
 /* pci_config.command.m.write */
 static void  _DML_M_pci_config__command__m__write(pci_data_capture_t *_dev, uint64 enable)
@@ -6300,7 +6306,7 @@ static void  _DML_M_pci_config__command__m__write(pci_data_capture_t *_dev, uint
     return;
     #line 558 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6304 "pci-data-capture-dml.c"
+#line 6310 "pci-data-capture-dml.c"
 
 /* pci_config.command.io.write */
 static void  _DML_M_pci_config__command__io__write(pci_data_capture_t *_dev, uint64 enable)
@@ -6331,18 +6337,18 @@ static void  _DML_M_pci_config__command__io__write(pci_data_capture_t *_dev, uin
                     #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                     {
                         #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                        base_address v901_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
-                        if (VTABLE_PARAM(UPCAST(v901_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v901_reg, base_address, map_params), struct _map_params, map_type), "I/O") == 0LL)
+                        base_address v900_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
+                        if (VTABLE_PARAM(UPCAST(v900_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v900_reg, base_address, map_params), struct _map_params, map_type), "I/O") == 0LL)
                         #line 487 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                         {
                             #line 489 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v901_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
-                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v901_reg);
+                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v900_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
+                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v900_reg);
                             #line 492 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v901_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
-                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v901_reg);
+                            if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v900_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
+                            CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v900_reg);
                         }
-                        #line 6346 "pci-data-capture-dml.c"
+                        #line 6352 "pci-data-capture-dml.c"
                     }
                     #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                 }
@@ -6356,7 +6362,7 @@ static void  _DML_M_pci_config__command__io__write(pci_data_capture_t *_dev, uin
     return;
     #line 536 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6360 "pci-data-capture-dml.c"
+#line 6366 "pci-data-capture-dml.c"
 
 /* pci_config.command.id.write */
 static void  _DML_M_pci_config__command__id__write(pci_data_capture_t *_dev, uint64 value)
@@ -6380,7 +6386,7 @@ static void  _DML_M_pci_config__command__id__write(pci_data_capture_t *_dev, uin
     return;
     #line 571 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6384 "pci-data-capture-dml.c"
+#line 6390 "pci-data-capture-dml.c"
 
 /* pci_config.class_code.write */
 static void  _DML_M_pci_config__class_code__write(pci_data_capture_t *_dev, uint64 value)
@@ -6403,7 +6409,7 @@ static void  _DML_M_pci_config__class_code__write(pci_data_capture_t *_dev, uint
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6407 "pci-data-capture-dml.c"
+#line 6413 "pci-data-capture-dml.c"
 
 /* pci_config.class_code.do_write */
 static void  _DML_M_pci_config__class_code__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -6413,7 +6419,7 @@ static void  _DML_M_pci_config__class_code__do_write(pci_data_capture_t *_dev, u
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6417 "pci-data-capture-dml.c"
+#line 6423 "pci-data-capture-dml.c"
 
 /* pci_config.class_code.can_write */
 static bool _DML_M_pci_config__class_code__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -6421,7 +6427,7 @@ static bool _DML_M_pci_config__class_code__can_write(pci_data_capture_t *_dev, u
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_class_code____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 38, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 6425 "pci-data-capture-dml.c"
+#line 6431 "pci-data-capture-dml.c"
 
 /* pci_config.cardbus_cis_ptr.write */
 static void  _DML_M_pci_config__cardbus_cis_ptr__write(pci_data_capture_t *_dev, uint64 value)
@@ -6444,7 +6450,7 @@ static void  _DML_M_pci_config__cardbus_cis_ptr__write(pci_data_capture_t *_dev,
     return;
     #line 279 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6448 "pci-data-capture-dml.c"
+#line 6454 "pci-data-capture-dml.c"
 
 /* pci_config.cardbus_cis_ptr.do_write */
 static void  _DML_M_pci_config__cardbus_cis_ptr__do_write(pci_data_capture_t *_dev, uint64 value)
@@ -6454,7 +6460,7 @@ static void  _DML_M_pci_config__cardbus_cis_ptr__do_write(pci_data_capture_t *_d
     return;
     #line 268 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6458 "pci-data-capture-dml.c"
+#line 6464 "pci-data-capture-dml.c"
 
 /* pci_config.cardbus_cis_ptr.can_write */
 static bool _DML_M_pci_config__cardbus_cis_ptr__can_write(pci_data_capture_t *_dev, uint64 value)
@@ -6462,7 +6468,7 @@ static bool _DML_M_pci_config__cardbus_cis_ptr__can_write(pci_data_capture_t *_d
 {
     return (CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write) {(&_tr_pci_config_cardbus_cis_ptr____implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write), ((_identity_t) {.id = 37, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset___reg_write_as_field__read_only_custom_write, _reg_write_as_field._register.get._get))) == value;
 }
-#line 6466 "pci-data-capture-dml.c"
+#line 6472 "pci-data-capture-dml.c"
 
 /* pci_config.bist.write */
 static void  _DML_M_pci_config__bist__write(pci_data_capture_t *_dev, uint64 value)
@@ -6473,7 +6479,7 @@ static void  _DML_M_pci_config__bist__write(pci_data_capture_t *_dev, uint64 val
     return;
     #line 584 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6477 "pci-data-capture-dml.c"
+#line 6483 "pci-data-capture-dml.c"
 
 /* pci_config.bist.read_field */
 static uint64 _DML_M_pci_config__bist__read_field(pci_data_capture_t *_dev, uint64 enabled_bits, void  *aux)
@@ -6481,7 +6487,7 @@ static uint64 _DML_M_pci_config__bist__read_field(pci_data_capture_t *_dev, uint
 {
     return 0ULL;
 }
-#line 6485 "pci-data-capture-dml.c"
+#line 6491 "pci-data-capture-dml.c"
 
 /* pci_config.bist.set */
 static void  _DML_M_pci_config__bist__set(pci_data_capture_t *_dev, uint64 value)
@@ -6492,7 +6498,7 @@ static void  _DML_M_pci_config__bist__set(pci_data_capture_t *_dev, uint64 value
     return;
     #line 580 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6496 "pci-data-capture-dml.c"
+#line 6502 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_5.ignore.write_field */
 static void  _DML_M_pci_config__base_address_5__ignore__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6501,7 +6507,7 @@ static void  _DML_M_pci_config__base_address_5__ignore__write_field(pci_data_cap
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6505 "pci-data-capture-dml.c"
+#line 6511 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_4.ignore.write_field */
 static void  _DML_M_pci_config__base_address_4__ignore__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6510,7 +6516,7 @@ static void  _DML_M_pci_config__base_address_4__ignore__write_field(pci_data_cap
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6514 "pci-data-capture-dml.c"
+#line 6520 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_3.ignore.write_field */
 static void  _DML_M_pci_config__base_address_3__ignore__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6519,7 +6525,7 @@ static void  _DML_M_pci_config__base_address_3__ignore__write_field(pci_data_cap
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6523 "pci-data-capture-dml.c"
+#line 6529 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_2.ignore.write_field */
 static void  _DML_M_pci_config__base_address_2__ignore__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6528,7 +6534,7 @@ static void  _DML_M_pci_config__base_address_2__ignore__write_field(pci_data_cap
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6532 "pci-data-capture-dml.c"
+#line 6538 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_1.ignore.write_field */
 static void  _DML_M_pci_config__base_address_1__ignore__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6537,7 +6543,7 @@ static void  _DML_M_pci_config__base_address_1__ignore__write_field(pci_data_cap
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6541 "pci-data-capture-dml.c"
+#line 6547 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_0.type.write_field */
 static void  _DML_M_pci_config__base_address_0__type__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6546,7 +6552,7 @@ static void  _DML_M_pci_config__base_address_0__type__write_field(pci_data_captu
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6550 "pci-data-capture-dml.c"
+#line 6556 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_0.type.set */
 static void  _DML_M_pci_config__base_address_0__type__set(pci_data_capture_t *_dev, uint64 value)
@@ -6572,7 +6578,7 @@ static void  _DML_M_pci_config__base_address_0__type__set(pci_data_capture_t *_d
     return;
     #line 1155 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6576 "pci-data-capture-dml.c"
+#line 6582 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_0.s.write_field */
 static void  _DML_M_pci_config__base_address_0__s__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6581,7 +6587,7 @@ static void  _DML_M_pci_config__base_address_0__s__write_field(pci_data_capture_
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6585 "pci-data-capture-dml.c"
+#line 6591 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_0.p.write_field */
 static void  _DML_M_pci_config__base_address_0__p__write_field(pci_data_capture_t *_dev, uint64 value, uint64 enabled_bits, void  *aux)
@@ -6590,7 +6596,7 @@ static void  _DML_M_pci_config__base_address_0__p__write_field(pci_data_capture_
     return;
     #line 386 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 6594 "pci-data-capture-dml.c"
+#line 6600 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_0.base.write */
 static void  _DML_M_pci_config__base_address_0__base__write(pci_data_capture_t *_dev, uint64 value)
@@ -6608,33 +6614,33 @@ static void  _DML_M_pci_config__base_address_0__base__write(pci_data_capture_t *
     return;
     #line 1128 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6612 "pci-data-capture-dml.c"
+#line 6618 "pci-data-capture-dml.c"
 
 /* pci_config.base_address_0.base.read */
 static uint64 _DML_M_pci_config__base_address_0__base__read(pci_data_capture_t *_dev)
 #line 1108 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 {
     #line 1110 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-    uint64 v937_value UNUSED  = 0LL;
+    uint64 v936_value UNUSED  = 0LL;
     {
         #line 1111 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v937_value = CALL_TRAIT_METHOD0(base_address, get_base, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset__memory_base_address_32) {(&_tr_pci_config_base_address_0____implicit__init_val_hard_reset___init_val_soft_reset__memory_base_address_32), ((_identity_t) {.id = 22, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset__memory_base_address_32, memory_base_address_32.memory_base_address_generic.base_address));
+        v936_value = CALL_TRAIT_METHOD0(base_address, get_base, _dev, UPCAST(((__implicit__init_val_hard_reset___init_val_soft_reset__memory_base_address_32) {(&_tr_pci_config_base_address_0____implicit__init_val_hard_reset___init_val_soft_reset__memory_base_address_32), ((_identity_t) {.id = 22, .encoded_index = 0})}), __implicit__init_val_hard_reset___init_val_soft_reset__memory_base_address_32, memory_base_address_32.memory_base_address_generic.base_address));
         #line 1111 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
     #line 1113 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     if ((CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(((field) {(&_tr_pci_config_base_address_0_type____implicit__init_val_hard_reset___init_val_soft_reset___set_field___write_field__field__ignore_write.field), ((_identity_t) {.id = 21, .encoded_index = 0})}), field, _get))) == 0LL)
     {
         #line 1114 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        uint64 *v939_tmp UNUSED  = &v937_value;
+        uint64 *v938_tmp UNUSED  = &v936_value;
         #line 1114 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        *v939_tmp = (*v939_tmp) & (0xfffffffULL);
-        #line 6632 "pci-data-capture-dml.c"
+        *v938_tmp = (*v938_tmp) & (0xfffffffULL);
+        #line 6638 "pci-data-capture-dml.c"
     }
     #line 1116 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-    return v937_value;
+    return v936_value;
     #line 1118 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6638 "pci-data-capture-dml.c"
+#line 6644 "pci-data-capture-dml.c"
 
 /* pci_bus.set */
 static void  _DML_M_pci_bus__set(pci_data_capture_t *_dev, conf_object_t *obj)
@@ -6655,7 +6661,7 @@ static void  _DML_M_pci_bus__set(pci_data_capture_t *_dev, conf_object_t *obj)
     return;
     #line 240 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6659 "pci-data-capture-dml.c"
+#line 6665 "pci-data-capture-dml.c"
 
 /* pci_bus_connected */
 static void  _DML_M_pci_bus_connected(pci_data_capture_t *_dev)
@@ -6665,7 +6671,7 @@ static void  _DML_M_pci_bus_connected(pci_data_capture_t *_dev)
     return;
     #line 198 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6669 "pci-data-capture-dml.c"
+#line 6675 "pci-data-capture-dml.c"
 
 /* pci_bus_disconnected */
 static void  _DML_M_pci_bus_disconnected(pci_data_capture_t *_dev)
@@ -6675,7 +6681,7 @@ static void  _DML_M_pci_bus_disconnected(pci_data_capture_t *_dev)
     return;
     #line 202 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6679 "pci-data-capture-dml.c"
+#line 6685 "pci-data-capture-dml.c"
 
 /* pci_config.bus_reset */
 static void  _DML_M_pci_config__bus_reset(pci_data_capture_t *_dev)
@@ -6688,7 +6694,7 @@ static void  _DML_M_pci_config__bus_reset(pci_data_capture_t *_dev)
     return;
     #line 513 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6692 "pci-data-capture-dml.c"
+#line 6698 "pci-data-capture-dml.c"
 
 /* pci_config.secondary_bus_reset */
 static void  _DML_M_pci_config__secondary_bus_reset(pci_data_capture_t *_dev)
@@ -6698,7 +6704,7 @@ static void  _DML_M_pci_config__secondary_bus_reset(pci_data_capture_t *_dev)
     return;
     #line 517 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6702 "pci-data-capture-dml.c"
+#line 6708 "pci-data-capture-dml.c"
 
 /* pci_config.update_all_mappings */
 static void  _DML_M_pci_config__update_all_mappings(pci_data_capture_t *_dev)
@@ -6722,18 +6728,18 @@ static void  _DML_M_pci_config__update_all_mappings(pci_data_capture_t *_dev)
             #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
             {
                 #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                base_address v949_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
-                if (VTABLE_PARAM(UPCAST(v949_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v949_reg, base_address, map_params), struct _map_params, map_type), "I/O") == 0LL)
+                base_address v948_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
+                if (VTABLE_PARAM(UPCAST(v948_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v948_reg, base_address, map_params), struct _map_params, map_type), "I/O") == 0LL)
                 #line 487 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                 {
                     #line 489 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v949_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
-                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v949_reg);
+                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v948_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
+                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v948_reg);
                     #line 492 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v949_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
-                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v949_reg);
+                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v948_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
+                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v948_reg);
                 }
-                #line 6737 "pci-data-capture-dml.c"
+                #line 6743 "pci-data-capture-dml.c"
             }
             #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
         }
@@ -6757,18 +6763,18 @@ static void  _DML_M_pci_config__update_all_mappings(pci_data_capture_t *_dev)
             #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
             {
                 #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                base_address v955_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
-                if (VTABLE_PARAM(UPCAST(v955_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v955_reg, base_address, map_params), struct _map_params, map_type), "memory") == 0LL)
+                base_address v954_reg UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
+                if (VTABLE_PARAM(UPCAST(v954_reg, base_address, _register), struct __register, mapped) && (int64 )strcmp(VTABLE_PARAM(UPCAST(v954_reg, base_address, map_params), struct _map_params, map_type), "memory") == 0LL)
                 #line 487 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
                 {
                     #line 489 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v955_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
-                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v955_reg);
+                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v954_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "base_address_0") == 0LL)
+                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v954_reg);
                     #line 492 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v955_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
-                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v955_reg);
+                    if ((int64 )strcmp(VTABLE_PARAM(UPCAST(v954_reg, base_address, _register._conf_attribute.object.name), struct _name, name), "expansion_rom_base") == 0LL)
+                    CALL_TRAIT_METHOD0(base_address, update_mapping, _dev, v954_reg);
                 }
-                #line 6772 "pci-data-capture-dml.c"
+                #line 6778 "pci-data-capture-dml.c"
             }
             #line 486 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
         }
@@ -6778,7 +6784,7 @@ static void  _DML_M_pci_config__update_all_mappings(pci_data_capture_t *_dev)
     return;
     #line 506 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6782 "pci-data-capture-dml.c"
+#line 6788 "pci-data-capture-dml.c"
 
 /* pci_bus.legacy_before_set */
 static void  _DML_M_pci_bus__legacy_before_set(pci_data_capture_t *_dev)
@@ -6788,35 +6794,35 @@ static void  _DML_M_pci_bus__legacy_before_set(pci_data_capture_t *_dev)
     return;
     #line 218 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 6792 "pci-data-capture-dml.c"
+#line 6798 "pci-data-capture-dml.c"
 
 /* is_pcie_device.get */
 static attr_value_t _DML_M_is_pcie_device__get(pci_data_capture_t *_dev)
 #line 109 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 {
-    attr_value_t v961_value UNUSED ;
+    attr_value_t v960_value UNUSED ;
     #line 110 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-    memset((void *)&v961_value, 0, sizeof(attr_value_t ));
+    memset((void *)&v960_value, 0, sizeof(attr_value_t ));
     {
         #line 111 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v961_value = SIM_make_attr_boolean(0);
+        v960_value = SIM_make_attr_boolean(0);
         #line 111 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
-    return v961_value;
+    return v960_value;
 }
-#line 6808 "pci-data-capture-dml.c"
+#line 6814 "pci-data-capture-dml.c"
 
 /* input.set */
 static bool _DML_M_input__set(pci_data_capture_t *_dev, attr_value_t attr)
 #line 65 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
 {
-    char const *v963_attr_str UNUSED  = SIM_attr_string(attr);
-    _DML_M_input__set_string(_dev, v963_attr_str);
+    char const *v962_attr_str UNUSED  = SIM_attr_string(attr);
+    _DML_M_input__set_string(_dev, v962_attr_str);
     #line 69 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
     return 0;
     #line 69 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
 }
-#line 6820 "pci-data-capture-dml.c"
+#line 6826 "pci-data-capture-dml.c"
 
 /* input.set_string */
 static void  _DML_M_input__set_string(pci_data_capture_t *_dev, char const *ptr)
@@ -6839,7 +6845,7 @@ static void  _DML_M_input__set_string(pci_data_capture_t *_dev, char const *ptr)
     return;
     #line 80 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
 }
-#line 6843 "pci-data-capture-dml.c"
+#line 6849 "pci-data-capture-dml.c"
 
 /* input.get */
 static attr_value_t _DML_M_input__get(pci_data_capture_t *_dev)
@@ -6848,59 +6854,59 @@ static attr_value_t _DML_M_input__get(pci_data_capture_t *_dev)
     return SIM_make_attr_string(!(_dev->input.val == NULL) ? _dev->input.val : "");
     #line 62 "/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/Dispositivo/simics-project/modules/pci-data-capture/pci-data-capture.dml"
 }
-#line 6852 "pci-data-capture-dml.c"
+#line 6858 "pci-data-capture-dml.c"
 
 /* config_registers.get */
 static attr_value_t _DML_M_config_registers__get(pci_data_capture_t *_dev)
 #line 86 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 {
-    attr_value_t v969_value UNUSED ;
+    attr_value_t v968_value UNUSED ;
     #line 87 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-    memset((void *)&v969_value, 0, sizeof(attr_value_t ));
-    uint64 v969_val UNUSED  = 0LL;
-    uint32 v969_i UNUSED  = 0LL;
+    memset((void *)&v968_value, 0, sizeof(attr_value_t ));
+    uint64 v968_val UNUSED  = 0LL;
+    uint32 v968_i UNUSED  = 0LL;
     #line 91 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     {
         #line 91 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v969_value = SIM_alloc_attr_list((uint32 )64ULL);
+        v968_value = SIM_alloc_attr_list((uint32 )64ULL);
         #line 91 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
     #line 93 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     {
         #line 93 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        v969_i = (uint32 )0ULL;
+        v968_i = (uint32 )0ULL;
         #line 93 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     }
     #line 93 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-    for (; (int64 )v969_i < 64LL; (int64 )++(v969_i))
+    for (; (int64 )v968_i < 64LL; (int64 )++(v968_i))
     #line 93 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
     {
         #line 95 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
         {
             #line 95 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-            uint64 v975__ret__out0 UNUSED  = 0LL;
+            uint64 v974__ret__out0 UNUSED  = 0LL;
             #line 95 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-            if (CALL_TRAIT_METHOD(bank, get, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), (uint64 )v969_i * 4ULL, 4ULL, &v975__ret__out0))
+            if (CALL_TRAIT_METHOD(bank, get, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), (uint64 )v968_i * 4ULL, 4ULL, &v974__ret__out0))
             #line 95 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
             goto throw8;
             #line 95 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-            v969_val = v975__ret__out0;
-            #line 6889 "pci-data-capture-dml.c"
+            v968_val = v974__ret__out0;
+            #line 6895 "pci-data-capture-dml.c"
         }
         #line 97 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
         if (false) throw8:
         #line 97 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
         {
             #line 97 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-            v969_val = 0ULL;
+            v968_val = 0ULL;
             #line 97 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
         }
         #line 99 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
-        SIM_attr_list_set_item(&v969_value, v969_i, SIM_make_attr_uint64(v969_val));
+        SIM_attr_list_set_item(&v968_value, v968_i, SIM_make_attr_uint64(v968_val));
     }
-    return v969_value;
+    return v968_value;
 }
-#line 6904 "pci-data-capture-dml.c"
+#line 6910 "pci-data-capture-dml.c"
 
 /* post_init */
 static void  _DML_M_post_init(pci_data_capture_t *_dev)
@@ -6910,7 +6916,7 @@ static void  _DML_M_post_init(pci_data_capture_t *_dev)
     return;
     #line 576 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 6914 "pci-data-capture-dml.c"
+#line 6920 "pci-data-capture-dml.c"
 
 /* init */
 static void  _DML_M_init(pci_data_capture_t *_dev)
@@ -6920,102 +6926,102 @@ static void  _DML_M_init(pci_data_capture_t *_dev)
     return;
     #line 575 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 6924 "pci-data-capture-dml.c"
+#line 6930 "pci-data-capture-dml.c"
 
 /* regs.register_view_read_only.is_read_only */
 static bool _DML_M_regs__register_view_read_only__is_read_only(pci_data_capture_t *_dev, uint32 reg)
 #line 2510 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v980_r UNUSED ;
+    _register v979_r UNUSED ;
     #line 2511 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v980_r, 0, sizeof(_register ));
+    memset((void *)&v979_r, 0, sizeof(_register ));
     #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v982__ret__out0 UNUSED ;
+        _register v981__ret__out0 UNUSED ;
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v982__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v981__ret__out0, 0, sizeof(_register ));
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v982__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v981__ret__out0))
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw9;
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v980_r = v982__ret__out0;
-        #line 6945 "pci-data-capture-dml.c"
+        v979_r = v981__ret__out0;
+        #line 6951 "pci-data-capture-dml.c"
     }
     #line 2515 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw9:
     #line 2515 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return 0;
     #line 2518 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return VTABLE_PARAM(v980_r, struct __register, _is_read_only);
+    return VTABLE_PARAM(v979_r, struct __register, _is_read_only);
 }
-#line 6954 "pci-data-capture-dml.c"
+#line 6960 "pci-data-capture-dml.c"
 
 /* regs.register_view.set_register_value */
 static void  _DML_M_regs__register_view__set_register_value(pci_data_capture_t *_dev, uint32 reg, uint64 val)
 #line 2497 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v984_r UNUSED ;
+    _register v983_r UNUSED ;
     #line 2498 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v984_r, 0, sizeof(_register ));
+    memset((void *)&v983_r, 0, sizeof(_register ));
     #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v986__ret__out0 UNUSED ;
+        _register v985__ret__out0 UNUSED ;
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v986__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v985__ret__out0, 0, sizeof(_register ));
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v986__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v985__ret__out0))
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw10;
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v984_r = v986__ret__out0;
-        #line 6975 "pci-data-capture-dml.c"
+        v983_r = v985__ret__out0;
+        #line 6981 "pci-data-capture-dml.c"
     }
     #line 2502 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw10:
     #line 2502 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return;
     #line 2505 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    CALL_TRAIT_METHOD(_set, set, _dev, UPCAST(v984_r, _register, set._set), val);
+    CALL_TRAIT_METHOD(_set, set, _dev, UPCAST(v983_r, _register, set._set), val);
     return;
     #line 2506 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 6986 "pci-data-capture-dml.c"
+#line 6992 "pci-data-capture-dml.c"
 
 /* regs.register_view.register_info */
 static attr_value_t _DML_M_regs__register_view__register_info(pci_data_capture_t *_dev, uint32 reg)
 #line 2447 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v988_r UNUSED ;
+    _register v987_r UNUSED ;
     #line 2448 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v988_r, 0, sizeof(_register ));
+    memset((void *)&v987_r, 0, sizeof(_register ));
     #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v990__ret__out0 UNUSED ;
+        _register v989__ret__out0 UNUSED ;
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v990__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v989__ret__out0, 0, sizeof(_register ));
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v990__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v989__ret__out0))
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw11;
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v988_r = v990__ret__out0;
-        #line 7007 "pci-data-capture-dml.c"
+        v987_r = v989__ret__out0;
+        #line 7013 "pci-data-capture-dml.c"
     }
     #line 2452 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw11:
     #line 2452 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return SIM_make_attr_nil();
     #line 2455 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    attr_value_t v988_fields UNUSED  = SIM_alloc_attr_list(_DML_TM_register___num_fields(_dev, v988_r));
+    attr_value_t v987_fields UNUSED  = SIM_alloc_attr_list(_DML_TM_register___num_fields(_dev, v987_r));
     #line 2458 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    uint32 v988_idx UNUSED  = (uint32 )0ULL;
+    uint32 v987_idx UNUSED  = (uint32 )0ULL;
     {
         #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _each_in_t __each_in_expr = _vtable_sequence_param(v988_r, offsetof(struct __register, fields));
+        _each_in_t __each_in_expr = _vtable_sequence_param(v987_r, offsetof(struct __register, fields));
         #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         for (uint32 _outer_idx = 0; _outer_idx < __each_in_expr.num; ++_outer_idx) {
             #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
@@ -7029,33 +7035,33 @@ static attr_value_t _DML_M_regs__register_view__register_info(pci_data_capture_t
             #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
                 #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                field v992_f UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
+                field v991_f UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
                 #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                 {
-                    attr_value_t v993_elem UNUSED  = SIM_make_attr_list((uint32 )4ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v992_f, field, object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(v988_r, _register, _conf_attribute.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v992_f, field, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v992_f, field, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )VTABLE_PARAM(UPCAST(v992_f, field, _lsb), struct __lsb, lsb)), SIM_make_attr_uint64(((uint64 )VTABLE_PARAM(UPCAST(v992_f, field, _lsb), struct __lsb, lsb) + (uint64 )VTABLE_PARAM(UPCAST(v992_f, field, _bitsize), struct __bitsize, bitsize)) - 1ULL));
+                    attr_value_t v992_elem UNUSED  = SIM_make_attr_list((uint32 )4ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v991_f, field, object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(v987_r, _register, _conf_attribute.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v991_f, field, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v991_f, field, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )VTABLE_PARAM(UPCAST(v991_f, field, _lsb), struct __lsb, lsb)), SIM_make_attr_uint64(((uint64 )VTABLE_PARAM(UPCAST(v991_f, field, _lsb), struct __lsb, lsb) + (uint64 )VTABLE_PARAM(UPCAST(v991_f, field, _bitsize), struct __bitsize, bitsize)) - 1ULL));
                     #line 2468 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                    SIM_attr_list_set_item(&v988_fields, v988_idx, v993_elem);
-                    (int64 )(v988_idx)++;
+                    SIM_attr_list_set_item(&v987_fields, v987_idx, v992_elem);
+                    (int64 )(v987_idx)++;
                 }
-                #line 7041 "pci-data-capture-dml.c"
+                #line 7047 "pci-data-capture-dml.c"
             }
             #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         }
         #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 2472 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    attr_value_t v988_ret UNUSED ;
+    attr_value_t v987_ret UNUSED ;
     #line 2472 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v988_ret, 0, sizeof(attr_value_t ));
+    memset((void *)&v987_ret, 0, sizeof(attr_value_t ));
     {
         #line 2473 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v988_ret = SIM_make_attr_list((uint32 )6ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v988_r, _register, _conf_attribute.object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v988_r, _register, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v988_r, _register, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )(_DML_TM_register___size(v988_r))), SIM_make_attr_uint64(VTABLE_PARAM(v988_r, struct __register, offset)), v988_fields, SIM_make_attr_boolean(0));
+        v987_ret = SIM_make_attr_list((uint32 )6ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v987_r, _register, _conf_attribute.object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v987_r, _register, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v987_r, _register, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )(_DML_TM_register___size(v987_r))), SIM_make_attr_uint64(VTABLE_PARAM(v987_r, struct __register, offset)), v987_fields, SIM_make_attr_boolean(0));
         #line 2473 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 2485 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return v988_ret;
+    return v987_ret;
 }
-#line 7059 "pci-data-capture-dml.c"
+#line 7065 "pci-data-capture-dml.c"
 
 /* regs.register_view.number_of_registers */
 static uint32 _DML_M_regs__register_view__number_of_registers(pci_data_capture_t *_dev)
@@ -7063,37 +7069,37 @@ static uint32 _DML_M_regs__register_view__number_of_registers(pci_data_capture_t
 {
     return _DML_TM_bank___num_registers(_dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank));
 }
-#line 7067 "pci-data-capture-dml.c"
+#line 7073 "pci-data-capture-dml.c"
 
 /* regs.register_view.get_register_value */
 static uint64 _DML_M_regs__register_view__get_register_value(pci_data_capture_t *_dev, uint32 reg)
 #line 2487 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v997_r UNUSED ;
+    _register v996_r UNUSED ;
     #line 2488 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v997_r, 0, sizeof(_register ));
+    memset((void *)&v996_r, 0, sizeof(_register ));
     #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v999__ret__out0 UNUSED ;
+        _register v998__ret__out0 UNUSED ;
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v999__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v998__ret__out0, 0, sizeof(_register ));
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v999__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank), reg, &v998__ret__out0))
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw12;
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v997_r = v999__ret__out0;
-        #line 7088 "pci-data-capture-dml.c"
+        v996_r = v998__ret__out0;
+        #line 7094 "pci-data-capture-dml.c"
     }
     #line 2492 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw12:
     #line 2492 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return 0ULL;
     #line 2495 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(v997_r, _register, get._get));
+    return CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(v996_r, _register, get._get));
 }
-#line 7097 "pci-data-capture-dml.c"
+#line 7103 "pci-data-capture-dml.c"
 
 /* regs.register_view.description */
 static char const *_DML_M_regs__register_view__description(pci_data_capture_t *_dev)
@@ -7102,7 +7108,7 @@ static char const *_DML_M_regs__register_view__description(pci_data_capture_t *_
     #line 2439 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return "";
 }
-#line 7106 "pci-data-capture-dml.c"
+#line 7112 "pci-data-capture-dml.c"
 
 /* regs.register_view.big_endian_bitorder */
 static bool _DML_M_regs__register_view__big_endian_bitorder(pci_data_capture_t *_dev)
@@ -7110,7 +7116,7 @@ static bool _DML_M_regs__register_view__big_endian_bitorder(pci_data_capture_t *
 {
     return 0;
 }
-#line 7114 "pci-data-capture-dml.c"
+#line 7120 "pci-data-capture-dml.c"
 
 /* regs.io_memory.operation */
 static exception_type_t _DML_M_regs__io_memory__operation(pci_data_capture_t *_dev, generic_transaction_t *mem_op, map_info_t map_info)
@@ -7123,7 +7129,7 @@ static exception_type_t _DML_M_regs__io_memory__operation(pci_data_capture_t *_d
     return (int32 )0x407LL;
     #line 1537 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7127 "pci-data-capture-dml.c"
+#line 7133 "pci-data-capture-dml.c"
 
 /* regs.instrumentation_order.move_before */
 static bool _DML_M_regs__instrumentation_order__move_before(pci_data_capture_t *_dev, conf_object_t *connection, conf_object_t *before)
@@ -7131,7 +7137,7 @@ static bool _DML_M_regs__instrumentation_order__move_before(pci_data_capture_t *
 {
     return _move_before(connection, before, &_dev->regs._connections);
 }
-#line 7135 "pci-data-capture-dml.c"
+#line 7141 "pci-data-capture-dml.c"
 
 /* regs.instrumentation_order.get_connections */
 static attr_value_t _DML_M_regs__instrumentation_order__get_connections(pci_data_capture_t *_dev)
@@ -7139,7 +7145,7 @@ static attr_value_t _DML_M_regs__instrumentation_order__get_connections(pci_data
 {
     return _get_connections(&_dev->regs._connections);
 }
-#line 7143 "pci-data-capture-dml.c"
+#line 7149 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.remove_connection_callbacks */
 static void  _DML_M_regs__bank_instrumentation_subscribe__remove_connection_callbacks(pci_data_capture_t *_dev, conf_object_t *connection)
@@ -7150,7 +7156,7 @@ static void  _DML_M_regs__bank_instrumentation_subscribe__remove_connection_call
     return;
     #line 2584 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7154 "pci-data-capture-dml.c"
+#line 7160 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.remove_callback */
 static void  _DML_M_regs__bank_instrumentation_subscribe__remove_callback(pci_data_capture_t *_dev, bank_callback_handle_t callback)
@@ -7161,7 +7167,7 @@ static void  _DML_M_regs__bank_instrumentation_subscribe__remove_callback(pci_da
     return;
     #line 2579 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7165 "pci-data-capture-dml.c"
+#line 7171 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.register_before_write */
 static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__register_before_write(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, before_write_callback_t before_write, void  *user_data)
@@ -7170,7 +7176,7 @@ static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__regis
     return _register_before_write(_DML_TM_bank___bank_obj(_dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank)), connection, offset, size, before_write, user_data, &_dev->regs._connections, &_dev->regs._before_write_callbacks);
     #line 2560 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7174 "pci-data-capture-dml.c"
+#line 7180 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.register_before_read */
 static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__register_before_read(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, before_read_callback_t before_read, void  *user_data)
@@ -7179,7 +7185,7 @@ static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__regis
     return _register_before_read(_DML_TM_bank___bank_obj(_dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank)), connection, offset, size, before_read, user_data, &_dev->regs._connections, &_dev->regs._before_read_callbacks);
     #line 2537 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7183 "pci-data-capture-dml.c"
+#line 7189 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.register_after_write */
 static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__register_after_write(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, after_write_callback_t after_write, void  *user_data)
@@ -7188,7 +7194,7 @@ static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__regis
     return _register_after_write(_DML_TM_bank___bank_obj(_dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank)), connection, offset, size, after_write, user_data, &_dev->regs._connections, &_dev->regs._after_write_callbacks);
     #line 2571 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7192 "pci-data-capture-dml.c"
+#line 7198 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.register_after_read */
 static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__register_after_read(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, after_read_callback_t after_read, void  *user_data)
@@ -7197,7 +7203,7 @@ static bank_callback_handle_t _DML_M_regs__bank_instrumentation_subscribe__regis
     return _register_after_read(_DML_TM_bank___bank_obj(_dev, UPCAST(((function_mapped_bank) {(&_tr_regs__function_mapped_bank), ((_identity_t) {.id = 96, .encoded_index = 0})}), function_mapped_bank, bank)), connection, offset, size, after_read, user_data, &_dev->regs._connections, &_dev->regs._after_read_callbacks);
     #line 2548 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7201 "pci-data-capture-dml.c"
+#line 7207 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.enable_connection_callbacks */
 static void  _DML_M_regs__bank_instrumentation_subscribe__enable_connection_callbacks(pci_data_capture_t *_dev, conf_object_t *connection)
@@ -7207,7 +7213,7 @@ static void  _DML_M_regs__bank_instrumentation_subscribe__enable_connection_call
     return;
     #line 2587 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7211 "pci-data-capture-dml.c"
+#line 7217 "pci-data-capture-dml.c"
 
 /* regs.bank_instrumentation_subscribe.disable_connection_callbacks */
 static void  _DML_M_regs__bank_instrumentation_subscribe__disable_connection_callbacks(pci_data_capture_t *_dev, conf_object_t *connection)
@@ -7217,7 +7223,7 @@ static void  _DML_M_regs__bank_instrumentation_subscribe__disable_connection_cal
     return;
     #line 2590 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7221 "pci-data-capture-dml.c"
+#line 7227 "pci-data-capture-dml.c"
 
 /* pci_device.bus_reset */
 static void  _DML_M_pci_device__bus_reset(pci_data_capture_t *_dev)
@@ -7227,102 +7233,102 @@ static void  _DML_M_pci_device__bus_reset(pci_data_capture_t *_dev)
     return;
     #line 1539 "/home/adriii/simics/simics-6.0.185/src/devices/dml-lib/1.4/pci/common.dml"
 }
-#line 7231 "pci-data-capture-dml.c"
+#line 7237 "pci-data-capture-dml.c"
 
 /* pci_config.register_view_read_only.is_read_only */
 static bool _DML_M_pci_config__register_view_read_only__is_read_only(pci_data_capture_t *_dev, uint32 reg)
 #line 2510 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v1018_r UNUSED ;
+    _register v1017_r UNUSED ;
     #line 2511 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v1018_r, 0, sizeof(_register ));
+    memset((void *)&v1017_r, 0, sizeof(_register ));
     #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v1020__ret__out0 UNUSED ;
+        _register v1019__ret__out0 UNUSED ;
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v1020__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v1019__ret__out0, 0, sizeof(_register ));
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1020__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1019__ret__out0))
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw13;
         #line 2513 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v1018_r = v1020__ret__out0;
-        #line 7252 "pci-data-capture-dml.c"
+        v1017_r = v1019__ret__out0;
+        #line 7258 "pci-data-capture-dml.c"
     }
     #line 2515 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw13:
     #line 2515 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return 0;
     #line 2518 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return VTABLE_PARAM(v1018_r, struct __register, _is_read_only);
+    return VTABLE_PARAM(v1017_r, struct __register, _is_read_only);
 }
-#line 7261 "pci-data-capture-dml.c"
+#line 7267 "pci-data-capture-dml.c"
 
 /* pci_config.register_view.set_register_value */
 static void  _DML_M_pci_config__register_view__set_register_value(pci_data_capture_t *_dev, uint32 reg, uint64 val)
 #line 2497 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v1022_r UNUSED ;
+    _register v1021_r UNUSED ;
     #line 2498 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v1022_r, 0, sizeof(_register ));
+    memset((void *)&v1021_r, 0, sizeof(_register ));
     #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v1024__ret__out0 UNUSED ;
+        _register v1023__ret__out0 UNUSED ;
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v1024__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v1023__ret__out0, 0, sizeof(_register ));
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1024__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1023__ret__out0))
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw14;
         #line 2500 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v1022_r = v1024__ret__out0;
-        #line 7282 "pci-data-capture-dml.c"
+        v1021_r = v1023__ret__out0;
+        #line 7288 "pci-data-capture-dml.c"
     }
     #line 2502 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw14:
     #line 2502 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return;
     #line 2505 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    CALL_TRAIT_METHOD(_set, set, _dev, UPCAST(v1022_r, _register, set._set), val);
+    CALL_TRAIT_METHOD(_set, set, _dev, UPCAST(v1021_r, _register, set._set), val);
     return;
     #line 2506 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7293 "pci-data-capture-dml.c"
+#line 7299 "pci-data-capture-dml.c"
 
 /* pci_config.register_view.register_info */
 static attr_value_t _DML_M_pci_config__register_view__register_info(pci_data_capture_t *_dev, uint32 reg)
 #line 2447 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v1026_r UNUSED ;
+    _register v1025_r UNUSED ;
     #line 2448 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v1026_r, 0, sizeof(_register ));
+    memset((void *)&v1025_r, 0, sizeof(_register ));
     #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v1028__ret__out0 UNUSED ;
+        _register v1027__ret__out0 UNUSED ;
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v1028__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v1027__ret__out0, 0, sizeof(_register ));
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1028__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1027__ret__out0))
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw15;
         #line 2450 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v1026_r = v1028__ret__out0;
-        #line 7314 "pci-data-capture-dml.c"
+        v1025_r = v1027__ret__out0;
+        #line 7320 "pci-data-capture-dml.c"
     }
     #line 2452 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw15:
     #line 2452 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return SIM_make_attr_nil();
     #line 2455 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    attr_value_t v1026_fields UNUSED  = SIM_alloc_attr_list(_DML_TM_register___num_fields(_dev, v1026_r));
+    attr_value_t v1025_fields UNUSED  = SIM_alloc_attr_list(_DML_TM_register___num_fields(_dev, v1025_r));
     #line 2458 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    uint32 v1026_idx UNUSED  = (uint32 )0ULL;
+    uint32 v1025_idx UNUSED  = (uint32 )0ULL;
     {
         #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _each_in_t __each_in_expr = _vtable_sequence_param(v1026_r, offsetof(struct __register, fields));
+        _each_in_t __each_in_expr = _vtable_sequence_param(v1025_r, offsetof(struct __register, fields));
         #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         for (uint32 _outer_idx = 0; _outer_idx < __each_in_expr.num; ++_outer_idx) {
             #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
@@ -7336,33 +7342,33 @@ static attr_value_t _DML_M_pci_config__register_view__register_info(pci_data_cap
             #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
                 #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                field v1030_f UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
+                field v1029_f UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
                 #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                 {
-                    attr_value_t v1031_elem UNUSED  = SIM_make_attr_list((uint32 )4ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v1030_f, field, object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(v1026_r, _register, _conf_attribute.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v1030_f, field, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v1030_f, field, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )VTABLE_PARAM(UPCAST(v1030_f, field, _lsb), struct __lsb, lsb)), SIM_make_attr_uint64(((uint64 )VTABLE_PARAM(UPCAST(v1030_f, field, _lsb), struct __lsb, lsb) + (uint64 )VTABLE_PARAM(UPCAST(v1030_f, field, _bitsize), struct __bitsize, bitsize)) - 1ULL));
+                    attr_value_t v1030_elem UNUSED  = SIM_make_attr_list((uint32 )4ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v1029_f, field, object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(v1025_r, _register, _conf_attribute.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v1029_f, field, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v1029_f, field, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )VTABLE_PARAM(UPCAST(v1029_f, field, _lsb), struct __lsb, lsb)), SIM_make_attr_uint64(((uint64 )VTABLE_PARAM(UPCAST(v1029_f, field, _lsb), struct __lsb, lsb) + (uint64 )VTABLE_PARAM(UPCAST(v1029_f, field, _bitsize), struct __bitsize, bitsize)) - 1ULL));
                     #line 2468 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                    SIM_attr_list_set_item(&v1026_fields, v1026_idx, v1031_elem);
-                    (int64 )(v1026_idx)++;
+                    SIM_attr_list_set_item(&v1025_fields, v1025_idx, v1030_elem);
+                    (int64 )(v1025_idx)++;
                 }
-                #line 7348 "pci-data-capture-dml.c"
+                #line 7354 "pci-data-capture-dml.c"
             }
             #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         }
         #line 2459 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 2472 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    attr_value_t v1026_ret UNUSED ;
+    attr_value_t v1025_ret UNUSED ;
     #line 2472 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v1026_ret, 0, sizeof(attr_value_t ));
+    memset((void *)&v1025_ret, 0, sizeof(attr_value_t ));
     {
         #line 2473 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v1026_ret = SIM_make_attr_list((uint32 )6ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v1026_r, _register, _conf_attribute.object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v1026_r, _register, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v1026_r, _register, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )(_DML_TM_register___size(v1026_r))), SIM_make_attr_uint64(VTABLE_PARAM(v1026_r, struct __register, offset)), v1026_fields, SIM_make_attr_boolean(0));
+        v1025_ret = SIM_make_attr_list((uint32 )6ULL, SIM_make_attr_string(((_DML_TM__qname___qname(_dev, UPCAST(v1025_r, _register, _conf_attribute.object._qname))) + (uint64 )strlen(_DML_TM__qname___qname(_dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank.object._qname)))) + 1LL), SIM_make_attr_string(VTABLE_PARAM(UPCAST(v1025_r, _register, shown_desc), struct _shown_desc, shown_desc) == NULL ? "" : VTABLE_PARAM(UPCAST(v1025_r, _register, shown_desc), struct _shown_desc, shown_desc)), SIM_make_attr_uint64((uint64 )(_DML_TM_register___size(v1025_r))), SIM_make_attr_uint64(VTABLE_PARAM(v1025_r, struct __register, offset)), v1025_fields, SIM_make_attr_boolean(0));
         #line 2473 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 2485 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return v1026_ret;
+    return v1025_ret;
 }
-#line 7366 "pci-data-capture-dml.c"
+#line 7372 "pci-data-capture-dml.c"
 
 /* pci_config.register_view.number_of_registers */
 static uint32 _DML_M_pci_config__register_view__number_of_registers(pci_data_capture_t *_dev)
@@ -7370,37 +7376,37 @@ static uint32 _DML_M_pci_config__register_view__number_of_registers(pci_data_cap
 {
     return _DML_TM_bank___num_registers(_dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank));
 }
-#line 7374 "pci-data-capture-dml.c"
+#line 7380 "pci-data-capture-dml.c"
 
 /* pci_config.register_view.get_register_value */
 static uint64 _DML_M_pci_config__register_view__get_register_value(pci_data_capture_t *_dev, uint32 reg)
 #line 2487 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _register v1035_r UNUSED ;
+    _register v1034_r UNUSED ;
     #line 2488 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    memset((void *)&v1035_r, 0, sizeof(_register ));
+    memset((void *)&v1034_r, 0, sizeof(_register ));
     #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        _register v1037__ret__out0 UNUSED ;
+        _register v1036__ret__out0 UNUSED ;
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        memset((void *)&v1037__ret__out0, 0, sizeof(_register ));
+        memset((void *)&v1036__ret__out0, 0, sizeof(_register ));
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1037__ret__out0))
+        if (CALL_TRAIT_METHOD(bank, _get_register, _dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank), reg, &v1036__ret__out0))
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         goto throw16;
         #line 2490 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        v1035_r = v1037__ret__out0;
-        #line 7395 "pci-data-capture-dml.c"
+        v1034_r = v1036__ret__out0;
+        #line 7401 "pci-data-capture-dml.c"
     }
     #line 2492 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     if (false) throw16:
     #line 2492 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return 0ULL;
     #line 2495 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(v1035_r, _register, get._get));
+    return CALL_TRAIT_METHOD0(_get, get, _dev, UPCAST(v1034_r, _register, get._get));
 }
-#line 7404 "pci-data-capture-dml.c"
+#line 7410 "pci-data-capture-dml.c"
 
 /* pci_config.register_view.description */
 static char const *_DML_M_pci_config__register_view__description(pci_data_capture_t *_dev)
@@ -7409,7 +7415,7 @@ static char const *_DML_M_pci_config__register_view__description(pci_data_captur
     #line 2439 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     return "";
 }
-#line 7413 "pci-data-capture-dml.c"
+#line 7419 "pci-data-capture-dml.c"
 
 /* pci_config.register_view.big_endian_bitorder */
 static bool _DML_M_pci_config__register_view__big_endian_bitorder(pci_data_capture_t *_dev)
@@ -7417,7 +7423,7 @@ static bool _DML_M_pci_config__register_view__big_endian_bitorder(pci_data_captu
 {
     return 0;
 }
-#line 7421 "pci-data-capture-dml.c"
+#line 7427 "pci-data-capture-dml.c"
 
 /* pci_config.io_memory.operation */
 static exception_type_t _DML_M_pci_config__io_memory__operation(pci_data_capture_t *_dev, generic_transaction_t *mem_op, map_info_t map_info)
@@ -7430,7 +7436,7 @@ static exception_type_t _DML_M_pci_config__io_memory__operation(pci_data_capture
     return (int32 )0x407LL;
     #line 1537 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7434 "pci-data-capture-dml.c"
+#line 7440 "pci-data-capture-dml.c"
 
 /* pci_config.instrumentation_order.move_before */
 static bool _DML_M_pci_config__instrumentation_order__move_before(pci_data_capture_t *_dev, conf_object_t *connection, conf_object_t *before)
@@ -7438,7 +7444,7 @@ static bool _DML_M_pci_config__instrumentation_order__move_before(pci_data_captu
 {
     return _move_before(connection, before, &_dev->pci_config._connections);
 }
-#line 7442 "pci-data-capture-dml.c"
+#line 7448 "pci-data-capture-dml.c"
 
 /* pci_config.instrumentation_order.get_connections */
 static attr_value_t _DML_M_pci_config__instrumentation_order__get_connections(pci_data_capture_t *_dev)
@@ -7446,7 +7452,7 @@ static attr_value_t _DML_M_pci_config__instrumentation_order__get_connections(pc
 {
     return _get_connections(&_dev->pci_config._connections);
 }
-#line 7450 "pci-data-capture-dml.c"
+#line 7456 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.remove_connection_callbacks */
 static void  _DML_M_pci_config__bank_instrumentation_subscribe__remove_connection_callbacks(pci_data_capture_t *_dev, conf_object_t *connection)
@@ -7457,7 +7463,7 @@ static void  _DML_M_pci_config__bank_instrumentation_subscribe__remove_connectio
     return;
     #line 2584 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7461 "pci-data-capture-dml.c"
+#line 7467 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.remove_callback */
 static void  _DML_M_pci_config__bank_instrumentation_subscribe__remove_callback(pci_data_capture_t *_dev, bank_callback_handle_t callback)
@@ -7468,7 +7474,7 @@ static void  _DML_M_pci_config__bank_instrumentation_subscribe__remove_callback(
     return;
     #line 2579 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7472 "pci-data-capture-dml.c"
+#line 7478 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.register_before_write */
 static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe__register_before_write(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, before_write_callback_t before_write, void  *user_data)
@@ -7477,7 +7483,7 @@ static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe_
     return _register_before_write(_DML_TM_bank___bank_obj(_dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank)), connection, offset, size, before_write, user_data, &_dev->pci_config._connections, &_dev->pci_config._before_write_callbacks);
     #line 2560 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7481 "pci-data-capture-dml.c"
+#line 7487 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.register_before_read */
 static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe__register_before_read(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, before_read_callback_t before_read, void  *user_data)
@@ -7486,7 +7492,7 @@ static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe_
     return _register_before_read(_DML_TM_bank___bank_obj(_dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank)), connection, offset, size, before_read, user_data, &_dev->pci_config._connections, &_dev->pci_config._before_read_callbacks);
     #line 2537 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7490 "pci-data-capture-dml.c"
+#line 7496 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.register_after_write */
 static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe__register_after_write(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, after_write_callback_t after_write, void  *user_data)
@@ -7495,7 +7501,7 @@ static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe_
     return _register_after_write(_DML_TM_bank___bank_obj(_dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank)), connection, offset, size, after_write, user_data, &_dev->pci_config._connections, &_dev->pci_config._after_write_callbacks);
     #line 2571 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7499 "pci-data-capture-dml.c"
+#line 7505 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.register_after_read */
 static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe__register_after_read(pci_data_capture_t *_dev, conf_object_t *connection, uint64 offset, uint64 size, after_read_callback_t after_read, void  *user_data)
@@ -7504,7 +7510,7 @@ static bank_callback_handle_t _DML_M_pci_config__bank_instrumentation_subscribe_
     return _register_after_read(_DML_TM_bank___bank_obj(_dev, UPCAST(((pci_config_type_0) {(&_tr_pci_config__pci_config_type_0), ((_identity_t) {.id = 85, .encoded_index = 0})}), pci_config_type_0, pci_config_generic._pci_config_generic.miss_pattern_bank.bank)), connection, offset, size, after_read, user_data, &_dev->pci_config._connections, &_dev->pci_config._after_read_callbacks);
     #line 2548 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7508 "pci-data-capture-dml.c"
+#line 7514 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.enable_connection_callbacks */
 static void  _DML_M_pci_config__bank_instrumentation_subscribe__enable_connection_callbacks(pci_data_capture_t *_dev, conf_object_t *connection)
@@ -7514,7 +7520,7 @@ static void  _DML_M_pci_config__bank_instrumentation_subscribe__enable_connectio
     return;
     #line 2587 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7518 "pci-data-capture-dml.c"
+#line 7524 "pci-data-capture-dml.c"
 
 /* pci_config.bank_instrumentation_subscribe.disable_connection_callbacks */
 static void  _DML_M_pci_config__bank_instrumentation_subscribe__disable_connection_callbacks(pci_data_capture_t *_dev, conf_object_t *connection)
@@ -7524,13 +7530,13 @@ static void  _DML_M_pci_config__bank_instrumentation_subscribe__disable_connecti
     return;
     #line 2590 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7528 "pci-data-capture-dml.c"
+#line 7534 "pci-data-capture-dml.c"
 
 /* io_memory.operation */
 static exception_type_t _DML_M_io_memory__operation(pci_data_capture_t *_dev, generic_transaction_t *mem_op, map_info_t map_info)
 #line 1126 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 {
-    uint64 v1055_offset UNUSED  = map_info.start - map_info.base;
+    uint64 v1054_offset UNUSED  = map_info.start - map_info.base;
     {
         #line 1128 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
         _each_in_t __each_in_expr = (_each_in_t){_each__function_mapped_bank__in__dev, 2, 0, 1};
@@ -7547,41 +7553,41 @@ static exception_type_t _DML_M_io_memory__operation(pci_data_capture_t *_dev, ge
             #line 1128 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
             {
                 #line 1128 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
-                function_mapped_bank v1056_b UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
-                if ((int64 )VTABLE_PARAM(v1056_b, struct _function_mapped_bank, function) == (int64 )map_info.function)
+                function_mapped_bank v1055_b UNUSED  = {_list.vtable, {_list.id, _inner_idx}};
+                if ((int64 )VTABLE_PARAM(v1055_b, struct _function_mapped_bank, function) == (int64 )map_info.function)
                 #line 1129 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
                 {
-                    if (!VTABLE_PARAM(UPCAST(v1056_b, function_mapped_bank, bank), struct _bank, use_io_memory))
+                    if (!VTABLE_PARAM(UPCAST(v1055_b, function_mapped_bank, bank), struct _bank, use_io_memory))
                     #line 1130 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
                     {
-                        map_target_t *v1059_mt UNUSED  = SIM_new_map_target(_DML_TM_bank___bank_obj(_dev, UPCAST(v1056_b, function_mapped_bank, bank)), NULL, NULL);
+                        map_target_t *v1058_mt UNUSED  = SIM_new_map_target(_DML_TM_bank___bank_obj(_dev, UPCAST(v1055_b, function_mapped_bank, bank)), NULL, NULL);
                         #line 1133 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
-                        if (!(!(v1059_mt == NULL)))
+                        if (!(!(v1058_mt == NULL)))
                         #line 1133 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
                         {
-                            exception_type_t v1060__exc UNUSED  = SIM_clear_exception();
-                            SIM_LOG_ERROR(&_dev->obj, 0LL, "failed to create map target for %s: %s", SIM_object_name(_DML_TM_bank___bank_obj(_dev, UPCAST(v1056_b, function_mapped_bank, bank))), SIM_last_error());
+                            exception_type_t v1059__exc UNUSED  = SIM_clear_exception();
+                            SIM_LOG_ERROR(&_dev->obj, 0LL, "failed to create map target for %s: %s", SIM_object_name(_DML_TM_bank___bank_obj(_dev, UPCAST(v1055_b, function_mapped_bank, bank))), SIM_last_error());
                             #line 1137 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
                             return (int32 )0x407LL;
                         }
                         #line 1142 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
-                        uint64 v1059_before UNUSED  = SIM_get_mem_op_physical_address(mem_op);
+                        uint64 v1058_before UNUSED  = SIM_get_mem_op_physical_address(mem_op);
                         #line 1144 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
-                        SIM_set_mem_op_physical_address(mem_op, v1059_before + v1055_offset);
-                        exception_type_t v1059_ret UNUSED  = VT_map_target_access(v1059_mt, mem_op);
+                        SIM_set_mem_op_physical_address(mem_op, v1058_before + v1054_offset);
+                        exception_type_t v1058_ret UNUSED  = VT_map_target_access(v1058_mt, mem_op);
                         #line 1147 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
-                        SIM_set_mem_op_physical_address(mem_op, v1059_before);
-                        SIM_free_map_target(v1059_mt);
-                        return v1059_ret;
+                        SIM_set_mem_op_physical_address(mem_op, v1058_before);
+                        SIM_free_map_target(v1058_mt);
+                        return v1058_ret;
                     }
-                    if (CALL_TRAIT_METHOD(bank, io_memory_access, _dev, UPCAST(v1056_b, function_mapped_bank, bank), mem_op, SIM_get_mem_op_physical_address(mem_op) + v1055_offset, NULL))
+                    if (CALL_TRAIT_METHOD(bank, io_memory_access, _dev, UPCAST(v1055_b, function_mapped_bank, bank), mem_op, SIM_get_mem_op_physical_address(mem_op) + v1054_offset, NULL))
                     #line 1155 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
                     return (int32 )0x401LL;
                     else
                     return (int32 )0x407LL;
                     #line 1159 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
                 }
-                #line 7585 "pci-data-capture-dml.c"
+                #line 7591 "pci-data-capture-dml.c"
             }
             #line 1128 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
         }
@@ -7592,7 +7598,7 @@ static exception_type_t _DML_M_io_memory__operation(pci_data_capture_t *_dev, ge
     #line 1168 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
     return (int32 )0x407LL;
 }
-#line 7596 "pci-data-capture-dml.c"
+#line 7602 "pci-data-capture-dml.c"
 
 /* SRESET.signal.signal_raise */
 static void  _DML_M_SRESET__signal__signal_raise(pci_data_capture_t *_dev)
@@ -7602,7 +7608,7 @@ static void  _DML_M_SRESET__signal__signal_raise(pci_data_capture_t *_dev)
     return;
     #line 324 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 7606 "pci-data-capture-dml.c"
+#line 7612 "pci-data-capture-dml.c"
 
 /* SRESET.signal.signal_lower */
 static void  _DML_M_SRESET__signal__signal_lower(pci_data_capture_t *_dev)
@@ -7611,7 +7617,7 @@ static void  _DML_M_SRESET__signal__signal_lower(pci_data_capture_t *_dev)
     return;
     #line 326 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 7615 "pci-data-capture-dml.c"
+#line 7621 "pci-data-capture-dml.c"
 
 /* HRESET.signal.signal_raise */
 static void  _DML_M_HRESET__signal__signal_raise(pci_data_capture_t *_dev)
@@ -7621,7 +7627,7 @@ static void  _DML_M_HRESET__signal__signal_raise(pci_data_capture_t *_dev)
     return;
     #line 246 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 7625 "pci-data-capture-dml.c"
+#line 7631 "pci-data-capture-dml.c"
 
 /* HRESET.signal.signal_lower */
 static void  _DML_M_HRESET__signal__signal_lower(pci_data_capture_t *_dev)
@@ -7630,7 +7636,7 @@ static void  _DML_M_HRESET__signal__signal_lower(pci_data_capture_t *_dev)
     return;
     #line 248 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/utility.dml"
 }
-#line 7634 "pci-data-capture-dml.c"
+#line 7640 "pci-data-capture-dml.c"
 
 /* _register_all_attributes */
 static void  _DML_M__register_all_attributes()
@@ -7641,94 +7647,94 @@ static void  _DML_M__register_all_attributes()
     return;
     #line 1049 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7645 "pci-data-capture-dml.c"
+#line 7651 "pci-data-capture-dml.c"
 
 /* _set_attribute_attr_portobj_trampoline */
 static set_error_t _DML_M__set_attribute_attr_portobj_trampoline(void  *_info, conf_object_t *_portobj, attr_value_t *val, attr_value_t *_idx)
 #line 943 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _port_object_t *v1068_portobj UNUSED  = (_port_object_t *)_portobj;
-    _dml_attr_getset_info_t *v1068_info UNUSED  = (_dml_attr_getset_info_t *)_info;
+    _port_object_t *v1067_portobj UNUSED  = (_port_object_t *)_portobj;
+    _dml_attr_getset_info_t *v1067_info UNUSED  = (_dml_attr_getset_info_t *)_info;
     #line 947 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    uint32 v1068_flat_index_offset UNUSED  = (uint32 )0ULL;
-    uint32 v1068_offset_coefficient UNUSED  = v1068_info->num;
+    uint32 v1067_flat_index_offset UNUSED  = (uint32 )0ULL;
+    uint32 v1067_offset_coefficient UNUSED  = v1067_info->num;
     {
         #line 949 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        uint32 v1069_i UNUSED  = (uint32 )0ULL;
+        uint32 v1068_i UNUSED  = (uint32 )0ULL;
         #line 949 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        for (; (int64 )v1069_i < (int64 )v1068_portobj->ndims; (int64 )++(v1069_i))
+        for (; (int64 )v1068_i < (int64 )v1067_portobj->ndims; (int64 )++(v1068_i))
         #line 949 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         {
-            uint32 *v1071_tmp UNUSED  = &v1068_offset_coefficient;
+            uint32 *v1070_tmp UNUSED  = &v1067_offset_coefficient;
             #line 950 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            *v1071_tmp = (uint32 )(DML_div((int64 )*v1071_tmp, (int64 )v1068_info->id_info->dimsizes[(int64 )v1069_i], "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 950));
-            uint32 *v1072_tmp UNUSED  = &v1068_flat_index_offset;
+            *v1070_tmp = (uint32 )(DML_div((int64 )*v1070_tmp, (int64 )v1067_info->id_info->dimsizes[(int64 )v1068_i], "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 950));
+            uint32 *v1071_tmp UNUSED  = &v1067_flat_index_offset;
             #line 951 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            *v1072_tmp = (uint32 )((uint64 )*v1072_tmp + (uint64 )v1068_portobj->indices[(int64 )v1069_i] * (uint64 )v1068_offset_coefficient);
+            *v1071_tmp = (uint32 )((uint64 )*v1071_tmp + (uint64 )v1067_portobj->indices[(int64 )v1068_i] * (uint64 )v1067_offset_coefficient);
         }
         #line 949 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 954 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return (&_trampoline_DML_M__set_attribute_attr)(v1068_portobj->dev, _info, (uint32 )v1068_portobj->ndims, v1068_flat_index_offset, val);
+    return (&_trampoline_DML_M__set_attribute_attr)(v1067_portobj->dev, _info, (uint32 )v1067_portobj->ndims, v1067_flat_index_offset, val);
     #line 956 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7676 "pci-data-capture-dml.c"
+#line 7682 "pci-data-capture-dml.c"
 
 /* _set_attribute_attr */
 static set_error_t _DML_M__set_attribute_attr(pci_data_capture_t *_dev, _dml_attr_getset_info_t const *_conf_info, uint32 start_dim, uint32 flat_index_offset, attr_value_t *val)
 #line 960 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _dml_attr_getset_info_t v1073_conf_info UNUSED  = *_conf_info;
-    _id_info_t v1073_id_info UNUSED  = *v1073_conf_info.id_info;
-    DML_ASSERT("/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 963, (int64 )start_dim <= (int64 )v1073_id_info.dimensions);
-    if ((int64 )((uint64 )v1073_id_info.dimensions - (uint64 )start_dim) == 0LL)
+    _dml_attr_getset_info_t v1072_conf_info UNUSED  = *_conf_info;
+    _id_info_t v1072_id_info UNUSED  = *v1072_conf_info.id_info;
+    DML_ASSERT("/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 963, (int64 )start_dim <= (int64 )v1072_id_info.dimensions);
+    if ((int64 )((uint64 )v1072_id_info.dimensions - (uint64 )start_dim) == 0LL)
     #line 964 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
-        _traitref_t v1074_traitref UNUSED  = {.trait=v1073_conf_info.vtable, .id={.id=v1073_id_info.id, .encoded_index=flat_index_offset}};
+        _traitref_t v1073_traitref UNUSED  = {.trait=v1072_conf_info.vtable, .id={.id=v1072_id_info.id, .encoded_index=flat_index_offset}};
         #line 967 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        return CALL_TRAIT_METHOD(_conf_attribute, set_attribute, _dev, *((_conf_attribute *)&v1074_traitref), *val);
+        return CALL_TRAIT_METHOD(_conf_attribute, set_attribute, _dev, *((_conf_attribute *)&v1073_traitref), *val);
     }
     #line 970 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    attr_value_t *v1073_items UNUSED  = MM_ZALLOC((int64 )v1073_conf_info.num, attr_value_t );
-    attr_value_t *v1073_items_buf UNUSED  = MM_ZALLOC((int64 )v1073_conf_info.num, attr_value_t );
+    attr_value_t *v1072_items UNUSED  = MM_ZALLOC((int64 )v1072_conf_info.num, attr_value_t );
+    attr_value_t *v1072_items_buf UNUSED  = MM_ZALLOC((int64 )v1072_conf_info.num, attr_value_t );
     {
         #line 972 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        *v1073_items = *val;
+        *v1072_items = *val;
         #line 972 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
-    size_t v1073_no_items UNUSED  = 1LL;
-    bool v1073_allow_cutoff UNUSED  = v1073_conf_info.allow_cutoff;
+    size_t v1072_no_items UNUSED  = 1LL;
+    bool v1072_allow_cutoff UNUSED  = v1072_conf_info.allow_cutoff;
     #line 976 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 976 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        int v1077_i UNUSED  = (int )start_dim;
+        int v1076_i UNUSED  = (int )start_dim;
         #line 976 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        for (; (int64 )v1077_i < (int64 )((int )v1073_id_info.dimensions); (int64 )++(v1077_i))
+        for (; (int64 )v1076_i < (int64 )((int )v1072_id_info.dimensions); (int64 )++(v1076_i))
         #line 976 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         {
-            uint32 v1078_frag_size UNUSED  = v1073_id_info.dimsizes[(int64 )v1077_i];
-            size_t v1078_new_no_items UNUSED  = (uint64 )v1073_no_items * (uint64 )v1078_frag_size;
-            if (v1073_allow_cutoff)
+            uint32 v1077_frag_size UNUSED  = v1072_id_info.dimsizes[(int64 )v1076_i];
+            size_t v1077_new_no_items UNUSED  = (uint64 )v1072_no_items * (uint64 )v1077_frag_size;
+            if (v1072_allow_cutoff)
             {
                 #line 980 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                int v1080_j UNUSED  = (int32 )0LL;
+                int v1079_j UNUSED  = (int32 )0LL;
                 #line 980 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                for (; DML_lt_iu((int64 )v1080_j, (uint64 )v1073_no_items); (int64 )++(v1080_j))
+                for (; DML_lt_iu((int64 )v1079_j, (uint64 )v1072_no_items); (int64 )++(v1079_j))
                 #line 980 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                 {
-                    uint32 v1081_subfrag_size UNUSED  = (uint32 )(SIM_attr_is_list(v1073_items[(int64 )v1080_j]) ? (int64 )SIM_attr_list_size(v1073_items[(int64 )v1080_j]) : 0LL);
+                    uint32 v1080_subfrag_size UNUSED  = (uint32 )(SIM_attr_is_list(v1072_items[(int64 )v1079_j]) ? (int64 )SIM_attr_list_size(v1072_items[(int64 )v1079_j]) : 0LL);
                     #line 984 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                    attr_value_t *v1081_subfrags UNUSED  = 0LL < (int64 )v1081_subfrag_size ? SIM_attr_list(v1073_items[(int64 )v1080_j]) : NULL;
+                    attr_value_t *v1080_subfrags UNUSED  = 0LL < (int64 )v1080_subfrag_size ? SIM_attr_list(v1072_items[(int64 )v1079_j]) : NULL;
                     #line 987 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                     {
                         #line 987 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        int v1082_k UNUSED  = (int32 )0LL;
+                        int v1081_k UNUSED  = (int32 )0LL;
                         #line 987 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        for (; (int64 )v1082_k < (int64 )v1081_subfrag_size; (int64 )++(v1082_k))
+                        for (; (int64 )v1081_k < (int64 )v1080_subfrag_size; (int64 )++(v1081_k))
                         #line 989 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                         {
                             #line 989 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                            v1073_items_buf[(int64 )((uint64 )v1080_j * (uint64 )v1078_frag_size + (uint64 )v1082_k)] = v1081_subfrags[(int64 )v1082_k];
+                            v1072_items_buf[(int64 )((uint64 )v1079_j * (uint64 )v1077_frag_size + (uint64 )v1081_k)] = v1080_subfrags[(int64 )v1081_k];
                             #line 989 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                         }
                         #line 987 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
@@ -7736,12 +7742,12 @@ static set_error_t _DML_M__set_attribute_attr(pci_data_capture_t *_dev, _dml_att
                     #line 991 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                     {
                         #line 991 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        int v1085_k UNUSED  = (int )v1081_subfrag_size;
+                        int v1084_k UNUSED  = (int )v1080_subfrag_size;
                         #line 991 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        for (; (int64 )v1085_k < (int64 )v1078_frag_size; (int64 )++(v1085_k))
+                        for (; (int64 )v1084_k < (int64 )v1077_frag_size; (int64 )++(v1084_k))
                         {
                             #line 992 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                            v1073_items_buf[(int64 )((uint64 )v1080_j * (uint64 )v1078_frag_size + (uint64 )v1085_k)] = SIM_make_attr_nil();
+                            v1072_items_buf[(int64 )((uint64 )v1079_j * (uint64 )v1077_frag_size + (uint64 )v1084_k)] = SIM_make_attr_nil();
                             #line 992 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                         }
                         #line 991 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
@@ -7754,20 +7760,20 @@ static set_error_t _DML_M__set_attribute_attr(pci_data_capture_t *_dev, _dml_att
             else
             {
                 #line 996 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                int v1089_j UNUSED  = (int32 )0LL;
+                int v1088_j UNUSED  = (int32 )0LL;
                 #line 996 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                for (; DML_lt_iu((int64 )v1089_j, (uint64 )v1073_no_items); (int64 )++(v1089_j))
+                for (; DML_lt_iu((int64 )v1088_j, (uint64 )v1072_no_items); (int64 )++(v1088_j))
                 #line 996 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                 {
-                    attr_value_t *v1090_subfrags UNUSED  = SIM_attr_list(v1073_items[(int64 )v1089_j]);
+                    attr_value_t *v1089_subfrags UNUSED  = SIM_attr_list(v1072_items[(int64 )v1088_j]);
                     {
                         #line 998 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        int v1091_k UNUSED  = (int32 )0LL;
+                        int v1090_k UNUSED  = (int32 )0LL;
                         #line 998 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        for (; (int64 )v1091_k < (int64 )v1078_frag_size; (int64 )++(v1091_k))
+                        for (; (int64 )v1090_k < (int64 )v1077_frag_size; (int64 )++(v1090_k))
                         {
                             #line 999 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                            v1073_items_buf[(int64 )((uint64 )v1089_j * (uint64 )v1078_frag_size + (uint64 )v1091_k)] = v1090_subfrags[(int64 )v1091_k];
+                            v1072_items_buf[(int64 )((uint64 )v1088_j * (uint64 )v1077_frag_size + (uint64 )v1090_k)] = v1089_subfrags[(int64 )v1090_k];
                             #line 999 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                         }
                         #line 998 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
@@ -7777,133 +7783,133 @@ static set_error_t _DML_M__set_attribute_attr(pci_data_capture_t *_dev, _dml_att
                 #line 996 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
             #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            attr_value_t *v1094_tmp0 UNUSED  = v1073_items_buf;
+            attr_value_t *v1093_tmp0 UNUSED  = v1072_items_buf;
             #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            attr_value_t *v1094_tmp1 UNUSED  = v1073_items;
+            attr_value_t *v1093_tmp1 UNUSED  = v1072_items;
             #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
                 #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                v1073_items = v1094_tmp0;
+                v1072_items = v1093_tmp0;
                 #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
             #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
                 #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                v1073_items_buf = v1094_tmp1;
+                v1072_items_buf = v1093_tmp1;
                 #line 1003 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
             {
                 #line 1004 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                v1073_no_items = v1078_new_no_items;
+                v1072_no_items = v1077_new_no_items;
                 #line 1004 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
         }
         #line 976 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 1006 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    MM_FREE(v1073_items_buf);
+    MM_FREE(v1072_items_buf);
     {
         #line 1007 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        int v1096_i UNUSED  = (int32 )0LL;
+        int v1095_i UNUSED  = (int32 )0LL;
         #line 1007 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        for (; DML_lt_iu((int64 )v1096_i, (uint64 )v1073_no_items); (int64 )++(v1096_i))
+        for (; DML_lt_iu((int64 )v1095_i, (uint64 )v1072_no_items); (int64 )++(v1095_i))
         #line 1007 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         {
-            _traitref_t v1097_traitref UNUSED  = {.trait=v1073_conf_info.vtable, .id={.id=v1073_id_info.id, .encoded_index=(uint32 )((uint64 )v1096_i + (uint64 )flat_index_offset)}};
+            _traitref_t v1096_traitref UNUSED  = {.trait=v1072_conf_info.vtable, .id={.id=v1072_id_info.id, .encoded_index=(uint32 )((uint64 )v1095_i + (uint64 )flat_index_offset)}};
             #line 1010 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            set_error_t v1097_status UNUSED  = CALL_TRAIT_METHOD(_conf_attribute, set_attribute, _dev, *((_conf_attribute *)&v1097_traitref), v1073_items[(int64 )v1096_i]);
+            set_error_t v1096_status UNUSED  = CALL_TRAIT_METHOD(_conf_attribute, set_attribute, _dev, *((_conf_attribute *)&v1096_traitref), v1072_items[(int64 )v1095_i]);
             #line 1012 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            if (!((int64 )v1097_status == 0LL))
+            if (!((int64 )v1096_status == 0LL))
             #line 1012 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
-                MM_FREE(v1073_items);
-                return v1097_status;
+                MM_FREE(v1072_items);
+                return v1096_status;
             }
         }
         #line 1007 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 1017 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    MM_FREE(v1073_items);
+    MM_FREE(v1072_items);
     return (int32 )0LL;
 }
-#line 7830 "pci-data-capture-dml.c"
+#line 7836 "pci-data-capture-dml.c"
 
 /* _get_attribute_attr_portobj_trampoline */
 static attr_value_t _DML_M__get_attribute_attr_portobj_trampoline(void  *_info, conf_object_t *_portobj, attr_value_t *_idx)
 #line 876 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _port_object_t *v1099_portobj UNUSED  = (_port_object_t *)_portobj;
-    _dml_attr_getset_info_t *v1099_info UNUSED  = (_dml_attr_getset_info_t *)_info;
+    _port_object_t *v1098_portobj UNUSED  = (_port_object_t *)_portobj;
+    _dml_attr_getset_info_t *v1098_info UNUSED  = (_dml_attr_getset_info_t *)_info;
     #line 880 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    uint32 v1099_flat_index_offset UNUSED  = (uint32 )0ULL;
-    uint32 v1099_offset_coefficient UNUSED  = v1099_info->num;
+    uint32 v1098_flat_index_offset UNUSED  = (uint32 )0ULL;
+    uint32 v1098_offset_coefficient UNUSED  = v1098_info->num;
     {
         #line 882 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        uint32 v1100_i UNUSED  = (uint32 )0ULL;
+        uint32 v1099_i UNUSED  = (uint32 )0ULL;
         #line 882 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        for (; (int64 )v1100_i < (int64 )v1099_portobj->ndims; (int64 )++(v1100_i))
+        for (; (int64 )v1099_i < (int64 )v1098_portobj->ndims; (int64 )++(v1099_i))
         #line 882 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         {
-            uint32 *v1102_tmp UNUSED  = &v1099_offset_coefficient;
+            uint32 *v1101_tmp UNUSED  = &v1098_offset_coefficient;
             #line 883 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            *v1102_tmp = (uint32 )(DML_div((int64 )*v1102_tmp, (int64 )v1099_info->id_info->dimsizes[(int64 )v1100_i], "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 883));
-            uint32 *v1103_tmp UNUSED  = &v1099_flat_index_offset;
+            *v1101_tmp = (uint32 )(DML_div((int64 )*v1101_tmp, (int64 )v1098_info->id_info->dimsizes[(int64 )v1099_i], "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 883));
+            uint32 *v1102_tmp UNUSED  = &v1098_flat_index_offset;
             #line 884 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            *v1103_tmp = (uint32 )((uint64 )*v1103_tmp + (uint64 )v1099_portobj->indices[(int64 )v1100_i] * (uint64 )v1099_offset_coefficient);
+            *v1102_tmp = (uint32 )((uint64 )*v1102_tmp + (uint64 )v1098_portobj->indices[(int64 )v1099_i] * (uint64 )v1098_offset_coefficient);
         }
         #line 882 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 887 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    return (&_trampoline_DML_M__get_attribute_attr)(v1099_portobj->dev, _info, (uint32 )v1099_portobj->ndims, v1099_flat_index_offset);
+    return (&_trampoline_DML_M__get_attribute_attr)(v1098_portobj->dev, _info, (uint32 )v1098_portobj->ndims, v1098_flat_index_offset);
     #line 889 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 7861 "pci-data-capture-dml.c"
+#line 7867 "pci-data-capture-dml.c"
 
 /* _get_attribute_attr */
 static attr_value_t _DML_M__get_attribute_attr(pci_data_capture_t *_dev, _dml_attr_getset_info_t const *_conf_info, uint32 start_dim, uint32 flat_index_offset)
 #line 893 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 {
-    _dml_attr_getset_info_t v1104_conf_info UNUSED  = *_conf_info;
-    _id_info_t v1104_id_info UNUSED  = *v1104_conf_info.id_info;
-    DML_ASSERT("/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 896, (int64 )start_dim <= (int64 )v1104_id_info.dimensions);
+    _dml_attr_getset_info_t v1103_conf_info UNUSED  = *_conf_info;
+    _id_info_t v1103_id_info UNUSED  = *v1103_conf_info.id_info;
+    DML_ASSERT("/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 896, (int64 )start_dim <= (int64 )v1103_id_info.dimensions);
     #line 898 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    if ((int64 )((uint64 )v1104_id_info.dimensions - (uint64 )start_dim) == 0LL)
+    if ((int64 )((uint64 )v1103_id_info.dimensions - (uint64 )start_dim) == 0LL)
     #line 898 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
-        _traitref_t v1105_traitref UNUSED  = {.trait=v1104_conf_info.vtable, .id={.id=v1104_id_info.id, .encoded_index=flat_index_offset}};
+        _traitref_t v1104_traitref UNUSED  = {.trait=v1103_conf_info.vtable, .id={.id=v1103_id_info.id, .encoded_index=flat_index_offset}};
         #line 901 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        return CALL_TRAIT_METHOD0(_conf_attribute, get_attribute, _dev, *((_conf_attribute *)&v1105_traitref));
+        return CALL_TRAIT_METHOD0(_conf_attribute, get_attribute, _dev, *((_conf_attribute *)&v1104_traitref));
     }
     #line 904 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    size_t v1104_no_items UNUSED  = v1104_conf_info.num;
+    size_t v1103_no_items UNUSED  = v1103_conf_info.num;
     {
         #line 905 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        uint32 v1107_i UNUSED  = (uint32 )0ULL;
+        uint32 v1106_i UNUSED  = (uint32 )0ULL;
         #line 905 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        for (; (int64 )v1107_i < (int64 )start_dim; (int64 )++(v1107_i))
+        for (; (int64 )v1106_i < (int64 )start_dim; (int64 )++(v1106_i))
         #line 905 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         {
-            size_t *v1109_tmp UNUSED  = &v1104_no_items;
+            size_t *v1108_tmp UNUSED  = &v1103_no_items;
             #line 906 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            *v1109_tmp = DML_divu((uint64 )*v1109_tmp, (uint64 )v1104_id_info.dimsizes[(int64 )v1107_i], "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 906);
+            *v1108_tmp = DML_divu((uint64 )*v1108_tmp, (uint64 )v1103_id_info.dimsizes[(int64 )v1106_i], "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 906);
         }
         #line 905 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 908 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    attr_value_t *v1104_items UNUSED  = MM_ZALLOC((uint64 )v1104_no_items, attr_value_t );
-    attr_value_t *v1104_items_buf UNUSED  = MM_ZALLOC((uint64 )v1104_no_items, attr_value_t );
+    attr_value_t *v1103_items UNUSED  = MM_ZALLOC((uint64 )v1103_no_items, attr_value_t );
+    attr_value_t *v1103_items_buf UNUSED  = MM_ZALLOC((uint64 )v1103_no_items, attr_value_t );
     {
         #line 910 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        int v1110_i UNUSED  = (int32 )0LL;
+        int v1109_i UNUSED  = (int32 )0LL;
         #line 910 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        for (; DML_lt_iu((int64 )v1110_i, (uint64 )v1104_no_items); (int64 )++(v1110_i))
+        for (; DML_lt_iu((int64 )v1109_i, (uint64 )v1103_no_items); (int64 )++(v1109_i))
         #line 910 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
         {
-            _traitref_t v1111_traitref UNUSED  = {.trait=v1104_conf_info.vtable, .id={.id=v1104_id_info.id, .encoded_index=(uint32 )((uint64 )v1110_i + (uint64 )flat_index_offset)}};
+            _traitref_t v1110_traitref UNUSED  = {.trait=v1103_conf_info.vtable, .id={.id=v1103_id_info.id, .encoded_index=(uint32 )((uint64 )v1109_i + (uint64 )flat_index_offset)}};
             #line 913 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
                 #line 913 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                v1104_items[(int64 )v1110_i] = CALL_TRAIT_METHOD0(_conf_attribute, get_attribute, _dev, *((_conf_attribute *)&v1111_traitref));
+                v1103_items[(int64 )v1109_i] = CALL_TRAIT_METHOD0(_conf_attribute, get_attribute, _dev, *((_conf_attribute *)&v1110_traitref));
                 #line 913 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
         }
@@ -7912,33 +7918,33 @@ static attr_value_t _DML_M__get_attribute_attr(pci_data_capture_t *_dev, _dml_at
     #line 915 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     {
         #line 915 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        int v1113_i UNUSED  = (int )((uint64 )((int )v1104_id_info.dimensions) - 1ULL);
+        int v1112_i UNUSED  = (int )((uint64 )((int )v1103_id_info.dimensions) - 1ULL);
         #line 915 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-        for (; (int64 )start_dim <= (int64 )v1113_i; (int64 )--(v1113_i))
+        for (; (int64 )start_dim <= (int64 )v1112_i; (int64 )--(v1112_i))
         {
-            uint32 v1114_new_frag_size UNUSED  = v1104_id_info.dimsizes[(int64 )v1113_i];
-            size_t v1114_new_no_items UNUSED  = DML_divu((uint64 )v1104_no_items, (uint64 )v1114_new_frag_size, "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 918);
+            uint32 v1113_new_frag_size UNUSED  = v1103_id_info.dimsizes[(int64 )v1112_i];
+            size_t v1113_new_no_items UNUSED  = DML_divu((uint64 )v1103_no_items, (uint64 )v1113_new_frag_size, "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml", 918);
             {
                 #line 919 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                int v1115_j UNUSED  = (int32 )0LL;
+                int v1114_j UNUSED  = (int32 )0LL;
                 #line 919 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                for (; DML_lt_iu((int64 )v1115_j, (uint64 )v1114_new_no_items); (int64 )++(v1115_j))
+                for (; DML_lt_iu((int64 )v1114_j, (uint64 )v1113_new_no_items); (int64 )++(v1114_j))
                 #line 919 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                 {
                     {
                         #line 920 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        v1104_items_buf[(int64 )v1115_j] = SIM_alloc_attr_list(v1114_new_frag_size);
+                        v1103_items_buf[(int64 )v1114_j] = SIM_alloc_attr_list(v1113_new_frag_size);
                         #line 920 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                     }
-                    attr_value_t *v1116_new_frag UNUSED  = SIM_attr_list(v1104_items_buf[(int64 )v1115_j]);
+                    attr_value_t *v1115_new_frag UNUSED  = SIM_attr_list(v1103_items_buf[(int64 )v1114_j]);
                     {
                         #line 922 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        int v1118_k UNUSED  = (int32 )0LL;
+                        int v1117_k UNUSED  = (int32 )0LL;
                         #line 922 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                        for (; (int64 )v1118_k < (int64 )v1114_new_frag_size; (int64 )++(v1118_k))
+                        for (; (int64 )v1117_k < (int64 )v1113_new_frag_size; (int64 )++(v1117_k))
                         {
                             #line 923 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                            v1116_new_frag[(int64 )v1118_k] = v1104_items[(int64 )((uint64 )v1115_j * (uint64 )v1114_new_frag_size + (uint64 )v1118_k)];
+                            v1115_new_frag[(int64 )v1117_k] = v1103_items[(int64 )((uint64 )v1114_j * (uint64 )v1113_new_frag_size + (uint64 )v1117_k)];
                             #line 923 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
                         }
                         #line 922 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
@@ -7948,36 +7954,36 @@ static attr_value_t _DML_M__get_attribute_attr(pci_data_capture_t *_dev, _dml_at
                 #line 919 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
             #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            attr_value_t *v1121_tmp0 UNUSED  = v1104_items_buf;
+            attr_value_t *v1120_tmp0 UNUSED  = v1103_items_buf;
             #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-            attr_value_t *v1121_tmp1 UNUSED  = v1104_items;
+            attr_value_t *v1120_tmp1 UNUSED  = v1103_items;
             #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
                 #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                v1104_items = v1121_tmp0;
+                v1103_items = v1120_tmp0;
                 #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
             #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             {
                 #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                v1104_items_buf = v1121_tmp1;
+                v1103_items_buf = v1120_tmp1;
                 #line 926 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
             {
                 #line 927 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-                v1104_no_items = v1114_new_no_items;
+                v1103_no_items = v1113_new_no_items;
                 #line 927 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
             }
         }
         #line 915 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
     }
     #line 929 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
-    attr_value_t v1104_to_ret UNUSED  = *v1104_items;
-    MM_FREE(v1104_items);
-    MM_FREE(v1104_items_buf);
-    return v1104_to_ret;
+    attr_value_t v1103_to_ret UNUSED  = *v1103_items;
+    MM_FREE(v1103_items);
+    MM_FREE(v1103_items_buf);
+    return v1103_to_ret;
 }
-#line 7981 "pci-data-capture-dml.c"
+#line 7987 "pci-data-capture-dml.c"
 
 /* _set_attribute_attr_trampoline */
 static set_error_t _DML_M__set_attribute_attr_trampoline(void  *info, conf_object_t *obj, attr_value_t *val, attr_value_t *_idx)
@@ -7985,7 +7991,7 @@ static set_error_t _DML_M__set_attribute_attr_trampoline(void  *info, conf_objec
 {
     return (&_trampoline_DML_M__set_attribute_attr)(obj, info, (uint32 )0ULL, (uint32 )0ULL, val);
 }
-#line 7989 "pci-data-capture-dml.c"
+#line 7995 "pci-data-capture-dml.c"
 
 /* _get_attribute_attr_trampoline */
 static attr_value_t _DML_M__get_attribute_attr_trampoline(void  *info, conf_object_t *obj, attr_value_t *_idx)
@@ -7993,7 +7999,7 @@ static attr_value_t _DML_M__get_attribute_attr_trampoline(void  *info, conf_obje
 {
     return (&_trampoline_DML_M__get_attribute_attr)(obj, info, (uint32 )0ULL, (uint32 )0ULL);
 }
-#line 7997 "pci-data-capture-dml.c"
+#line 8003 "pci-data-capture-dml.c"
 
 /* _get_attribute_info */
 static _dml_attr_conf_info_t _DML_M__get_attribute_info(_conf_attribute attr)
@@ -8002,7 +8008,7 @@ static _dml_attr_conf_info_t _DML_M__get_attribute_info(_conf_attribute attr)
     return (_dml_attr_conf_info_t ) {.name=VTABLE_PARAM(attr, struct __conf_attribute, _attr_name), .type=VTABLE_PARAM(attr, struct __conf_attribute, _attr_type), .doc=VTABLE_PARAM(attr, struct __conf_attribute, _documentation), .parent_obj_class=!(VTABLE_PARAM(attr, struct __conf_attribute, _parent_obj_class) == NULL) ? *VTABLE_PARAM(attr, struct __conf_attribute, _parent_obj_class) : NULL, .proxy_info=VTABLE_PARAM(attr, struct __conf_attribute, _parent_obj_proxy_info), .flags=VTABLE_PARAM(attr, struct __conf_attribute, _flags), .object_relative_dims=VTABLE_PARAM(attr, struct __conf_attribute, _object_relative_dims), .readable=VTABLE_PARAM(attr, struct __conf_attribute, readable), .writable=VTABLE_PARAM(attr, struct __conf_attribute, writable), .should_be_registered=VTABLE_PARAM(attr, struct __conf_attribute, _should_be_registered), .allow_cutoff=VTABLE_PARAM(attr, struct __conf_attribute, _attr_allow_cutoff)};
     #line 852 "/home/adriii/simics/simics-6.0.185/linux64/bin/dml/1.4/dml-builtins.dml"
 }
-#line 8006 "pci-data-capture-dml.c"
+#line 8012 "pci-data-capture-dml.c"
 
 conf_class_t *
 _initialize_pci_data_capture_dml(void)

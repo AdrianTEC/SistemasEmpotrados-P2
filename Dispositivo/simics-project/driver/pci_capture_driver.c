@@ -17,7 +17,7 @@
 #define PCI_CAPTURE_DRIVER_CHR_DEV "pci_capture_chr_dev"    // name of character device driver
 #define MAJOR_NUMBER 0                                      // major number for character device
 #define MAX_CHR_DEV 1                                       // amount of character devices
-#define MAX_BUFFER_DATA_LEN 30                              // max length of buffer
+#define MAX_BUFFER_DATA_LEN 3                              // max length of buffer
 
 /* IOCTL */
 #define WR_VALUE _IOW('a', 'a', int32_t *)
@@ -306,20 +306,32 @@ static int close_pci_capture_chr_dev(struct inode *pinode, struct file *pfile) {
     return 0;
 }
 
+
+
+#define MEMORY_ADDRESS (0xf1000000 + 0x18)
+
 static ssize_t read_pci_capture_chr_dev(struct file *pfile, char __user *buffer, size_t length, loff_t *offset) {
     size_t len = 0;
     char temp_buffer[MAX_BUFFER_DATA_LEN];
+    u8 value[3];
 
-    /* Formatear el valor actual de currentValue como una cadena */
-    len = snprintf(temp_buffer, MAX_BUFFER_DATA_LEN, "%u\n", currentValue);
+    /* Leer 3 bytes desde la dirección de memoria */
+    value[0] = ioread8((void __iomem *)MEMORY_ADDRESS);
+    value[1] = ioread8((void __iomem *)(MEMORY_ADDRESS + 1));
+    value[2] = ioread8((void __iomem *)(MEMORY_ADDRESS + 2));
 
-    /* Copiar el valor de currentValue al buffer del usuario */
+    /* Formatear los bytes leídos como una cadena */
+    len = snprintf(temp_buffer, MAX_BUFFER_DATA_LEN, "%02X%02X%02X\n", value[0], value[1], value[2]);
+
+    /* Copiar el valor al buffer del usuario */
     if (copy_to_user(buffer, temp_buffer, len)) {
         return -EFAULT;
     }
 
     return len;
 }
+
+
 
 static ssize_t write_pci_capture_chr_dev(struct file *pfile, const char __user *buffer, size_t length, loff_t *offset) {
     size_t n_copied;
@@ -412,8 +424,8 @@ void write_test_register(uint32_t value) {
 }
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Ernesto Ulate Ramirez <ernesto.ulate.ramirez@intel.com>");
-MODULE_DESCRIPTION("Test PCI driver");
+MODULE_AUTHOR("Adrian");
+MODULE_DESCRIPTION("PCI driver");
 MODULE_VERSION("1.0");
 MODULE_DEVICE_TABLE(pci, pci_capture_driver_table);
 

@@ -1,44 +1,54 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 
-#define BUFFER_SIZE 256
-
-int main() {
-    FILE *file;
-    uint16_t buffer[BUFFER_SIZE];
-    
-    // Abre el archivo BMP para lectura binaria
-    file = fopen("/home/adriii/Documents/GitHub/SistemasEmpotrados-P2/BMP_Testing/smile.bmp", "rb");
-    if (file == NULL) {
-        printf("No se pudo abrir el archivo.\n");
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s <input_bitmap_file>\n", argv[0]);
         return 1;
     }
 
-    // Salta la cabecera del archivo BMP (tamaño fijo de 54 bytes)
-    fseek(file, 54, SEEK_SET);
+    FILE *file = fopen(argv[1], "rb");
+    if (!file) {
+        printf("Error opening file.\n");
+        return 1;
+    }
 
-    // Lee los valores de los píxeles y los guarda en el buffer
-    uint32_t index = 0;
-    while (index < BUFFER_SIZE) {
-        // Leer dos bytes del archivo BMP para formar un valor de píxel de 16 bits
-        uint8_t bytes[2];
-        if (fread(bytes, sizeof(uint8_t), 2, file) != 2) {
-            break; // Error al leer el archivo o llegada al final del archivo
+    // Leer el encabezado del archivo BMP
+    uint8_t header[54];
+    fread(header, sizeof(uint8_t), 54, file);
+
+    // Obtener el ancho y alto de la imagen desde el encabezado
+    int32_t width = *(int32_t *)&header[18];
+    int32_t height = *(int32_t *)&header[22];
+
+    // Calcular el tamaño del arreglo de píxeles
+    int pixel_array_size = width * height / 2;
+
+    // Leer los datos de los píxeles
+    uint8_t *pixels = (uint8_t *)malloc(pixel_array_size * sizeof(uint8_t));
+    fread(pixels, sizeof(uint8_t), pixel_array_size, file);
+
+    // Imprimir el ancho y alto de la imagen
+    printf("Width: %d\n", width);
+    printf("Height: %d\n", height);
+
+    // Imprimir los píxeles en formato decimal
+    printf("4-bit pixels:\n");
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            int index = i * (width / 2) + j / 2;
+            uint8_t byte = pixels[index];
+            if (j % 2 == 0)
+                printf("%d ", (byte >> 4) & 0x0F);
+            else
+                printf("%d ", byte & 0x0F);
         }
-        // Combina los bytes en un valor de píxel de 16 bits
-        uint16_t pixel_value = (bytes[1] << 8) | bytes[0];
-        buffer[index++] = pixel_value;
+        printf("\n");
     }
 
-    // Cierra el archivo
+    // Liberar la memoria y cerrar el archivo
+    free(pixels);
     fclose(file);
-
-    // Imprime los valores de los píxeles del buffer
-    printf("Valores de los pixeles:\n");
-    for (uint32_t i = 0; i < index; i++) {
-        printf("%d ", buffer[i]);
-    }
-    printf("\n");
-
     return 0;
 }
